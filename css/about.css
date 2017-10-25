@@ -28,7 +28,7 @@ h1 {
     padding: 100px;
 }
 
-p {
+.aboutemilyblock {
   display: block;
   margin-left: 40px;
   margin-right: 40px;
@@ -45,6 +45,7 @@ p {
   line-height: 23px;
   font-family: monospace;
 }
+
 
 .nav {
     overflow: hidden;
