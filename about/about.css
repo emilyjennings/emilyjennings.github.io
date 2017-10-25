@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #E3F3F3;
+  font-family: Georgia, serif;
+  background: #3B4548;
+  margin: 20px 20px 20px 20px;
+  padding: 15px;
+  background-image: url('../img/bali2.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: contain;
+  scroll-behavior: smooth;
+}
+
+h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 60px;
+    text-align: center;
+    padding: 20px;
+    color: #C4EFDA;
+    font-weight: bold;
+    margin: 70px 10px 70px 10px;
+    padding: 100px;
+}
+
+p {
+  display: block;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border: 10px solid #23C6B3;
+  border-radius: 20px;
+  background: #C4EFDA;
+  font-size: 20px;
+  padding: 20px;
+  letter-spacing: .5px;
+  color: #747E7A;
+  text-indent: 30px;
+  line-height: 23px;
+  font-family: monospace;
+}
+
+.nav {
+    overflow: hidden;
+    background-color: #3B4548;
+    position: fixed;
+    top: 0;
+    right: 0;
+    border-radius: 5px 5px 5px 5px;
+    margin: 10px;
+    border: 1px solid #35CDD1;
+    display: block;
+    background-color: #3B4548;
+    line-height: 2.5em;
+    font-family: monospace;
+    font-size: 14px;
+    padding: 10px;
+    opacity: 0.8;
+}
+
+a:link, a:visited {
+  color: #35CDD1;
+}
+
+a:hover {
+  color: #C4EFDA;
+}
