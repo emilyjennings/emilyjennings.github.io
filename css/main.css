@@ -120,7 +120,7 @@ h2 {
   font-family: monospace;
 }
 
-.whatidotitle, .whatiamseekingtitle, .pictureblocktitle, .empathytitle, .authenttitle, .growthtitle, .diversitytitle {
+.blocktitle {
   text-align: left;
   font-style: italic;
   font-family: Georgia, serif;
@@ -129,7 +129,7 @@ h2 {
   margin: 50px 40px 20px 40px;
 }
 
-p.whatidocontent, p.whatiamseeking, p.empathycontent, p.authentcontent, p.growthcontent, p.diversitycontent {
+p.content {
   margin-left: 40px;
   margin-right: 40px;
   margin-top: 20px;
