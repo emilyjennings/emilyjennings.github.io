@@ -146,7 +146,7 @@ p.whatidocontent, p.whatiamseeking, p.empathycontent, p.authentcontent, p.growth
   font-family: monospace;
 }
 
-.whatiamseekingblock, .whatidoblock, .pictureblock, .empathyblock, .authentblock, .growthblock, .diversityblock {
+.floatblock {
   width: 50%;
   float: left;
 }
