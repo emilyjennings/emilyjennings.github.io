@@ -15,6 +15,34 @@ h1 {
   margin: 40px 10px 20px 10px;
 }
 
+
+h2 {
+  text-align: left;
+  font-style: italic;
+  font-family: Georgia, serif;
+  font-size: 40px;
+  color: #35CDD1;
+  margin: 20px 80px 20px 80px;
+}
+
+p {
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border: 10px solid #23C6B3;
+  border-radius: 20px;
+  background: #C4EFDA;
+  font-size: 20px;
+  padding: 20px;
+  letter-spacing: .5px;
+  color: #747E7A;
+  text-indent: 30px;
+  line-height: 23px;
+  font-family: monospace;
+
+}
+
 .photo-gallery {
   text-align: center;
 }
