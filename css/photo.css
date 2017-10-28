@@ -1,9 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   color: #E3F3F3;
   font-family: Georgia, serif;
   background: #3B4548;
   margin: 20px 20px 20px 20px;
   padding: 15px;
+  text-align: center;
 }
 
 h1 {
@@ -40,12 +45,9 @@ p {
   text-indent: 30px;
   line-height: 23px;
   font-family: monospace;
-
 }
 
-.photo-gallery {
-  text-align: center;
-}
+
 
 .nav {
     overflow: hidden;
@@ -63,6 +65,15 @@ p {
     font-size: 14px;
     padding: 10px;
     opacity: 0.8;
+}
+
+.row {
+
+}
+
+img {
+    border: 7px solid #23C6B3;
+    border-radius: 10px;
 }
 
 a:link, a:visited {
