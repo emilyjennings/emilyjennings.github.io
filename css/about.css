@@ -72,3 +72,25 @@ a:link, a:visited {
 a:hover {
   color: #C4EFDA;
 }
+
+@media all and (max-width: 768px) {
+
+  .nav {
+      overflow: hidden;
+      background-color: #3B4548;
+      position: fixed;
+      float: left;
+      left: 0;
+      text-align: left;
+      border-radius: 5px;
+      margin: 5px;
+      border: 1px solid #35CDD1;
+      line-height: 2.5em;
+      font-family: monospace;
+      font-size: 12px;
+      padding: 10px;
+      opacity: 0.8;
+      width: 80px;
+    }
+
+}
