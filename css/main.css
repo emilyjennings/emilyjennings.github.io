@@ -31,7 +31,7 @@
 
 .subtitle h2 {
   font-size: 40px;
-  margin: 20px;
+  margin: 7%;
 }
 
 
@@ -170,12 +170,14 @@ p.content {
   color: #C4EFDA;
   font-weight: bold;
   margin: 50px 40px 20px 40px;
-  padding: 101px;
+  padding: 80px;
   background-image: url("../img/rainbali2.jpg");
   border: 10px solid #23C6B3;
   border-radius: 20px;
 
 }
+
+
 
 p {
   margin-bottom: 1em;
@@ -221,38 +223,84 @@ a:hover {
     font-size: 55px;
     width: 100%;
     float: left;
-    padding: 10px;
     color: #C4EFDA;
     font-weight: bold;
     margin: 10px 10px 20px 10px;
     padding: 100px;
     }
 
+    .mywhy {
+      font-size: 25px;
+      margin: 20px 55px 20px 55px;
+
+    }
+
+    .pictureblocktitle {
+      background-image: url("../img/bustop.jpg");
+      background-position: top center;
+
+
+    }
+
+    .pictureblocktitle h3 {
+      font-size: 20px
+
+    }
+
 }
 
-@media all and (max-width: 376px) {
+@media all and (max-width: 440px) {
 
   .background-image h1 {
-    position: relative;
+
     z-index: 2;
     font-size: 40px;
     width: 100%;
     float: left;
-    padding: 10px;
     color: #C4EFDA;
     font-weight: bold;
     margin: 10px 10px 20px 10px;
-    padding: 100px;
+    padding: 10px;
     }
 
   .subtitle h2 {
     font-size: 20px
   }
 
+  .pictureblocktitle {
+    background-image: url("../img/bustop.jpg");
+    background-position: top center;
+  }
+
   .pictureblocktitle h3 {
-    font-size: 30px;
-    padding: 10px;
-    width: 100%;
+    font-size: 20px
+
+  }
+
+  .mywhy {
+    font-size: 15px;
+    color: #35CDD1;
+    font-family: monospace;
+    text-align: center;
+    border: 1px solid #35CDD1;
+    margin: 20px 55px 20px 55px;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .mywhy li {
+    display: block;
+  }
+
+  .mywhy li:before {
+  	content: '';
+  	color: #35CDD1;
+  	font-size: 20px;
+  }
+  .mywhy li:first-child:before {
+  	content: '';
+    color: #35CDD1;
+  	font-size: 20px;
   }
 
 
