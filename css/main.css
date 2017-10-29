@@ -21,12 +21,17 @@
 }
 
 .background-image img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: auto;
-    opacity: 0.4;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.4;
+}
+
+.subtitle h2 {
+  font-size: 40px;
+  margin: 20px;
 }
 
 
@@ -76,7 +81,7 @@ h2 {
   font-family: Georgia, serif;
   font-size: 30px;
   color: #C4EFDA;
-  margin: 50px 40px 20px 40px;
+  margin: auto;
 }
 
 .mywhy {
@@ -126,7 +131,11 @@ h2 {
   font-family: Georgia, serif;
   font-size: 30px;
   color: #C4EFDA;
-  margin: 50px 40px 20px 40px;
+  margin: 40px auto auto auto;
+}
+
+h3 {
+  font-size: 50px;
 }
 
 p.content {
@@ -144,6 +153,7 @@ p.content {
   text-indent: 30px;
   line-height: 23px;
   font-family: monospace;
+  overflow: scroll;
 }
 
 .floatblock {
@@ -178,4 +188,72 @@ a:link, a:visited {
 
 a:hover {
   color: #C4EFDA;
+}
+
+@media all and (max-width: 768px) {
+
+  .nav {
+      overflow: hidden;
+      background-color: #3B4548;
+      position: fixed;
+      float: left;
+      left: 0;
+      text-align: left;
+      border-radius: 5px;
+      margin: 5px;
+      border: 1px solid #35CDD1;
+      line-height: 2.5em;
+      font-family: monospace;
+      font-size: 12px;
+      padding: 10px;
+      opacity: 0.8;
+      width: 80px;
+    }
+
+  .floatblock {
+      width: 100%;
+      float: left;
+    }
+
+  .background-image h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 55px;
+    width: 100%;
+    float: left;
+    padding: 10px;
+    color: #C4EFDA;
+    font-weight: bold;
+    margin: 10px 10px 20px 10px;
+    padding: 100px;
+    }
+
+}
+
+@media all and (max-width: 376px) {
+
+  .background-image h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 40px;
+    width: 100%;
+    float: left;
+    padding: 10px;
+    color: #C4EFDA;
+    font-weight: bold;
+    margin: 10px 10px 20px 10px;
+    padding: 100px;
+    }
+
+  .subtitle h2 {
+    font-size: 20px
+  }
+
+  .pictureblocktitle h3 {
+    font-size: 30px;
+    padding: 10px;
+    width: 100%;
+  }
+
+
 }
