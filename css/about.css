@@ -63,6 +63,7 @@ h1 {
     font-size: 14px;
     padding: 10px;
     opacity: 0.8;
+    width: 55px;
 }
 
 a:link, a:visited {
@@ -90,7 +91,7 @@ a:hover {
       font-size: 12px;
       padding: 10px;
       opacity: 0.8;
-      width: 80px;
+      width: 75px;
     }
 
 }
