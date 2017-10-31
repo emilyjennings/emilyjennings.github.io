@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   color: #E3F3F3;
   font-family: Georgia, serif;
