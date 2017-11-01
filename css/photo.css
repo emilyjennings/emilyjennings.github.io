@@ -6,8 +6,6 @@ body {
   color: #E3F3F3;
   font-family: Georgia, serif;
   background: #3B4548;
-  margin: 20px 20px 20px 20px;
-  padding: 15px;
 }
 
 h1 {
@@ -30,8 +28,8 @@ h2 {
 }
 
 p {
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 50px;
+  margin-right: 50px;
   margin-top: 20px;
   margin-bottom: 10px;
   border: 10px solid #23C6B3;
@@ -66,7 +64,7 @@ p {
 }
 
 .container {
-  margin: 80px;
+  margin: 0 20px 0 20px;
   display: inline-block;
 }
 
@@ -75,7 +73,7 @@ p {
 }
 
 .row {
-  width: 30%;
+  width: 33.333%;
   float: left;
 }
 
@@ -88,6 +86,7 @@ img {
   border: 5px solid #23C6B3;
   border-radius: 10px;
   width: 100%;
+  padding: 5px 5px 5px 5px;
 
 }
 
