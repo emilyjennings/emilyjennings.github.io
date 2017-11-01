@@ -24,7 +24,7 @@ h2 {
   font-family: Georgia, serif;
   font-size: 40px;
   color: #35CDD1;
-  margin: 20px
+  margin: 40px
 }
 
 p {
@@ -68,16 +68,17 @@ p {
   display: inline-block;
 }
 
-.col img {
+
+.row {
   width: 100%;
 }
 
-.row {
-  width: 33.333%;
+.col {
+  width: 33%;
   float: left;
 }
 
-.row2 {
+.col2 {
   width: 50%;
   float: left;
 }
@@ -100,14 +101,9 @@ a:hover {
 
 @media all and (max-width: 768px) {
 
-  .row {
+  .col {
     width: 100%;
-    float: left;
-  }
 
-  .row2 {
-    width: 100%;
-    float: left;
   }
 
   .nav {
