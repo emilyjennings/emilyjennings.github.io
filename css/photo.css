@@ -103,7 +103,10 @@ a:hover {
 
   .col {
     width: 100%;
+  }
 
+  p {
+    font-size: 16px;
   }
 
   .nav {

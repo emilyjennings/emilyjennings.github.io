@@ -62,6 +62,9 @@ a:hover {
   p {
     width: wrap;
     overflow: scroll;
+    font-size: 14px;
+    line-height: 1em;
+    margin: 10px;
   }
 
   .nav {
@@ -79,7 +82,7 @@ a:hover {
       font-size: 12px;
       padding: 10px;
       opacity: 0.8;
-      width: 55px;
+      width: 75px;
     }
 
 }
