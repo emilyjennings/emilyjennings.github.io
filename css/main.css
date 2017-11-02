@@ -146,7 +146,7 @@ p.content {
   border: 10px solid #23C6B3;
   border-radius: 18px;
   background: #C4EFDA;
-  font-size: 20px;
+  font-size: 18px;
   padding: 20px;
   letter-spacing: .5px;
   color: #747E7A;
@@ -317,8 +317,9 @@ a:hover {
   	font-size: 22px;
   }
 
-  .mywhycontent {
-    font-size: 17px;
+  .mywhycontent, p.content {
+    font-size: 15px;
+    margin: 10px 0px 10px 0px;
   }
 
 

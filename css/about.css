@@ -46,7 +46,7 @@ h1 {
   border: 10px solid #23C6B3;
   border-radius: 20px;
   background: #C4EFDA;
-  font-size: 20px;
+  font-size: 18px;
   padding: 20px;
   letter-spacing: .5px;
   color: #747E7A;
@@ -59,10 +59,6 @@ h1 {
   font-weight: bold;
   font-size: 1.2em;
 }
-
-
-
-
 
 
 .nav {
@@ -111,5 +107,14 @@ a:hover {
       opacity: 0.8;
       width: 75px;
     }
+
+  .aboutemilyblock {
+    font-size: 15px;
+    margin: 10px;
+  }
+
+  h1 {
+      font-size: 40px;
+  }
 
 }
