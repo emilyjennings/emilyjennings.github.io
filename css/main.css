@@ -93,6 +93,10 @@ h2 {
   margin: auto;
 }
 
+#mywhytitle {
+  display: none;
+}
+
 .mywhy {
   font-size: 30px;
   color: #35CDD1;
@@ -102,7 +106,7 @@ h2 {
   margin: 20px 55px 20px 55px;
   padding: 5px;
   border-radius: 5px;
-  display: none;  
+  display: none;
 }
 
 .mywhy li {
@@ -117,6 +121,7 @@ h2 {
 .mywhy li:first-child:before {
 	content: '';
 }
+
 
 .mywhycontent {
   margin-left: 40px;

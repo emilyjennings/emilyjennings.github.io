@@ -18,13 +18,15 @@ $(document).ready(function(){
   $(AnimateSummary).show()
 
 
-  $(window).scroll(function() {
-    if ($(this).scrollTop()> 100) {
+  $(window).scroll(function(){
+    if ($(this).scrollTop()> 100){
       $('.mywhy').fadeIn();
       } else {
       $('.mywhy').fadeOut();
     }
   });
+
+
 
 
 
