@@ -39,6 +39,10 @@
   opacity: 0.01;
 }
 
+.fadebody {
+  display: none;
+}
+
 
 body {
   color: #E3F3F3;
@@ -98,6 +102,7 @@ h2 {
   margin: 20px 55px 20px 55px;
   padding: 5px;
   border-radius: 5px;
+  display: none;  
 }
 
 .mywhy li {
