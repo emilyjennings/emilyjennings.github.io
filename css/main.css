@@ -35,6 +35,10 @@
   margin: 7%;
 }
 
+#summary {
+  opacity: 0.01;
+}
+
 
 body {
   color: #E3F3F3;

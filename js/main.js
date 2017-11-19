@@ -4,8 +4,20 @@ $(document).ready(function(){
   var AnimateName = function(){
     $('#myname').animate({
       opacity: '1.0',
-    }, 4000)};
+    }, 1500)
+  };
 
-  $('#myname').show(AnimateName);
+  $(AnimateName).show()
+
+  var AnimateSummary = function(){
+    $('#summary').animate({
+      opacity: '1.0',
+    }, 3000)
+  };
+
+  $(AnimateSummary).show()
+
+
+
 
 });
