@@ -30,6 +30,10 @@ p {
   font-family: monospace;
 }
 
+img {
+  width: 30%;
+}
+
 .nav {
     overflow: hidden;
     background-color: #3B4548;
