@@ -106,7 +106,7 @@ h2 {
   margin: 20px 55px 20px 55px;
   padding: 5px;
   border-radius: 5px;
-  display: none;
+
 }
 
 .mywhy li {
@@ -123,7 +123,7 @@ h2 {
 }
 
 
-.mywhycontent {
+#mywhycontent {
   margin-left: 40px;
   margin-right: 40px;
   margin-top: 20px;

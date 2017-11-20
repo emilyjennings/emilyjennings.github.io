@@ -18,10 +18,16 @@ $(document).ready(function(){
   $(AnimateSummary).show()
 
 
-  $(window).scroll(function(){
+/*  $(window).scroll(function(){
     if ($(this).scrollTop()>100){
       $('.mywhy').fadeIn(3500);
-      } 
+      }
+  }); */
+
+  $(window).scroll(function(){
+    if ($(this).scrollTop()>100){
+      $('#mywhycontent').fadeIn(3500);
+      }
   });
 
   $(window).scroll(function(){
