@@ -19,15 +19,16 @@ $(document).ready(function(){
 
 
   $(window).scroll(function(){
-    if ($(this).scrollTop()> 100){
-      $('.mywhy').fadeIn();
-      } else {
-      $('.mywhy').fadeOut();
-    }
+    if ($(this).scrollTop()>100){
+      $('.mywhy').fadeIn(3500);
+      } 
   });
 
-
-
+  $(window).scroll(function(){
+    if ($(this).scrollTop()>100){
+      $('.floatblock').fadeIn(3000);
+    }
+  });
 
 
 });
