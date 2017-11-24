@@ -8,20 +8,20 @@ $(document).ready(function(){
 
   $(AnimateName).show() */
 
-  var AnimateSummary = function(){
+//  var AnimateSummary = function(){
     $('#summary').animate({
       opacity: '1.0',
-    }, 3000)
-  };
+    }, 3000);
+//  };
 
-  $(AnimateSummary).show()
+//  $(AnimateSummary).show()
 
 
   /*$(window).scroll(function(){
     if ($(this).scrollTop()>40){ */
       $('.mywhy li').animate({
         opacity: '1.0'
-      }, 8000)
+      }, 8000);
 //    }
 //  });
 
@@ -36,6 +36,47 @@ $(document).ready(function(){
       $('.floatblock').fadeIn(4000);
     }
   });
+
+
+
+/*  $( ".cross" ).hide();
+  $( ".menu" ).hide();
+  $( ".hamburger" ).click(function() {
+    $( ".menu" ).slideToggle( "slow", function() {
+      $( ".hamburger" ).hide();
+      $( ".cross" ).show();
+    });
+  });
+
+  $( ".cross" ).click(function() {
+    $( ".menu" ).slideToggle( "slow", function() {
+      $( ".cross" ).hide();
+      $( ".hamburger" ).show();
+  }); */
+
+//  $("#cross").hide();
+  $(".nav").hide();
+  $("#hamburger").click(function(){
+    $(".nav").slideToggle("slow", function(){
+      $("#hamburger").hide();
+      $(".nav").show();
+      $("#cross").show();
+    });
+  });
+
+
+  $("#cross").click(function(){
+    if ($("#cross").is(":visible")){
+      $(".nav").slideToggle("slow", function(){
+        $("#cross").hide();
+        $("#hamburger").show();
+      });
+    }
+  });
+
+
+
+
 
   /* var slideShow = 1
   showTitle(slideShow)

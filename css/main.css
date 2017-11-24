@@ -2,6 +2,22 @@
   box-sizing: border-box;
 }
 
+#hamburger {
+  background-color: #3B4548;
+  position: fixed;
+  top: 0;
+  right: 0;
+  border-radius: 5px 5px 5px 5px;
+  margin: 10px;
+  border: 1px solid #35CDD1;
+  line-height: 2.5em;
+  font-family: monospace;
+  font-size: 20px;
+  padding: 1px 13px;
+  opacity: 0.8;
+  color: #C4EFDA;
+}
+
 .background-image {
     position: relative;
     overflow: hidden;
@@ -18,7 +34,7 @@
     font-weight: bold;
     margin: 40px 10px 20px 10px;
     padding: 100px;
-    
+
 }
 
 .background-image img {
@@ -66,11 +82,10 @@ body {
     margin: 10px;
     border: 1px solid #35CDD1;
     display: block;
-    background-color: #3B4548;
     line-height: 2.5em;
     font-family: monospace;
-    font-size: 14px;
-    padding: 10px;
+    font-size: 16px;
+    padding: 8px;
     opacity: 0.8;
 }
 
@@ -191,9 +206,7 @@ p.content {
   background-image: url("../img/rainbali2.jpg");
   border: 10px solid #23C6B3;
   border-radius: 20px;
-
 }
-
 
 
 p {
@@ -207,6 +220,11 @@ a:link, a:visited {
 
 a:hover {
   color: #C4EFDA;
+}
+
+#cross {
+  text-decoration: none;
+  font-size: 19px
 }
 
 @media all and (max-width: 768px) {
@@ -239,7 +257,6 @@ a:hover {
     z-index: 2;
     font-size: 55px;
     width: 100%;
-    float: left;
     color: #C4EFDA;
     font-weight: bold;
     margin: 10px 10px 20px 10px;
@@ -287,7 +304,6 @@ a:hover {
     z-index: 2;
     font-size: 40px;
     width: 100%;
-    float: left;
     color: #C4EFDA;
     font-weight: bold;
     margin: 10px 10px 20px 10px;
