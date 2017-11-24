@@ -1,13 +1,12 @@
 $(document).ready(function(){
 
-
-  var AnimateName = function(){
+/*  var AnimateName = function(){
     $('#myname').animate({
       opacity: '1.0',
     }, 1500)
   };
 
-  $(AnimateName).show()
+  $(AnimateName).show() */
 
   var AnimateSummary = function(){
     $('#summary').animate({
@@ -18,22 +17,22 @@ $(document).ready(function(){
   $(AnimateSummary).show()
 
 
-  $(window).scroll(function(){
-    if ($(this).scrollTop()>80){
+  /*$(window).scroll(function(){
+    if ($(this).scrollTop()>40){ */
       $('.mywhy li').animate({
         opacity: '1.0'
-      }, 3000)
-    }
-  });
+      }, 8000)
+//    }
+//  });
 
   $(window).scroll(function(){
-    if ($(this).scrollTop()>100){
+    if ($(this).scrollTop()>80){
       $('#mywhycontent').fadeIn(4000);
       }
   });
 
   $(window).scroll(function(){
-    if ($(this).scrollTop()>100){
+    if ($(this).scrollTop()>80){
       $('.floatblock').fadeIn(4000);
     }
   });
