@@ -26,13 +26,13 @@ $(document).ready(function(){
 
   $(window).scroll(function(){
     if ($(this).scrollTop()>100){
-      $('#mywhycontent').fadeIn(3500);
+      $('#mywhycontent').fadeIn(4000);
       }
   });
 
   $(window).scroll(function(){
     if ($(this).scrollTop()>100){
-      $('.floatblock').fadeIn(3000);
+      $('.floatblock').fadeIn(4000);
     }
   });
 
