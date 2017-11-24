@@ -111,6 +111,7 @@ h2 {
 
 .mywhy li {
   display: inline-block;
+  opacity: 0;
 }
 
 .mywhy li:before {

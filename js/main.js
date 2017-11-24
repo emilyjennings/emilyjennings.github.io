@@ -18,11 +18,13 @@ $(document).ready(function(){
   $(AnimateSummary).show()
 
 
-/*  $(window).scroll(function(){
+  $(window).scroll(function(){
     if ($(this).scrollTop()>100){
-      $('.mywhy').fadeIn(3500);
-      }
-  }); */
+      $('.mywhy li').animate({
+        opacity: '1.0'
+      }, 4000)
+    }
+  });
 
   $(window).scroll(function(){
     if ($(this).scrollTop()>100){
@@ -35,6 +37,9 @@ $(document).ready(function(){
       $('.floatblock').fadeIn(4000);
     }
   });
+
+
+
 
 
 });
