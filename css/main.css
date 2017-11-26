@@ -64,7 +64,7 @@ body {
   color: #E3F3F3;
   font-family: Georgia, serif;
   background: #3B4548;
-  margin: 20px 20px 20px 20px;
+  margin: 20px;
   padding: 15px;
   background-position: top;
   background-repeat: no-repeat;
@@ -233,9 +233,6 @@ a:hover {
       overflow: hidden;
       background-color: #3B4548;
       position: fixed;
-      float: left;
-      left: 0;
-      text-align: left;
       border-radius: 5px;
       margin: 5px;
       border: 1px solid #35CDD1;
@@ -250,6 +247,7 @@ a:hover {
   .floatblock {
       width: 100%;
       float: left;
+      font-size: 16px;
     }
 
   .background-image h1 {
@@ -263,20 +261,25 @@ a:hover {
     padding: 100px;
     }
 
-    .mywhy {
+  .mywhy {
       font-size: 25px;
       margin: 20px 55px 20px 55px;
-
     }
 
-    .pictureblocktitle {
+  .mywhycontent {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    font-size: 18px;
+  }
+
+  .pictureblocktitle {
       background-image: url("../img/bustop.jpg");
       background-position: top center;
-
-
     }
 
-    .pictureblocktitle h3 {
+  .pictureblocktitle h3 {
       font-size: 20px
     }
 
@@ -299,20 +302,27 @@ a:hover {
 
 @media all and (max-width: 450px) {
 
-  .background-image h1 {
+  body {
+    padding: 0;
+    margin: 25px 10px 10px 10px;
+  }
 
+  .background-image {
+    padding: 10px;
+  }
+
+  .background-image h1 {
     z-index: 2;
-    font-size: 40px;
+    font-size: 45px;
     width: 100%;
     color: #C4EFDA;
     font-weight: bold;
     margin: 10px 10px 20px 10px;
     padding: 10px;
-    }
-
+  }
 
   .subtitle h2 {
-    font-size: 20px
+    font-size: 24px;
   }
 
   .pictureblocktitle {
@@ -321,11 +331,11 @@ a:hover {
   }
 
   .pictureblocktitle h3 {
-    font-size: 20px
+    font-size: 23px
   }
 
   .mywhy {
-    font-size: 16px;
+    font-size: 22px;
     color: #35CDD1;
     font-family: monospace;
     text-align: center;
@@ -350,10 +360,18 @@ a:hover {
   	font-size: 22px;
   }
 
-  .mywhycontent, p.content {
+  p.content {
     font-size: 15px;
     margin: 10px 0px 10px 0px;
   }
+
+  #mywhycontent {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 16px;
+  }
+
+
 
 
 }
