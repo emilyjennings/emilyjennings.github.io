@@ -244,6 +244,10 @@ a:hover {
       width: 80px;
     }
 
+    .subtitle h2 {
+      font-size: 50px;
+    }
+
   .floatblock {
       width: 100%;
       float: left;
@@ -253,7 +257,7 @@ a:hover {
   .background-image h1 {
     position: relative;
     z-index: 2;
-    font-size: 55px;
+    font-size: 60px;
     width: 100%;
     color: #C4EFDA;
     font-weight: bold;
@@ -262,17 +266,17 @@ a:hover {
     }
 
   .mywhy {
-      font-size: 25px;
+      font-size: 40px;
       margin: 20px 55px 20px 55px;
+      padding: 10px;
     }
 
-  .mywhycontent {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    padding: 0;
-    font-size: 18px;
-  }
+    #mywhycontent {
+      margin-left: 5px;
+      margin-right: 5px;
+      font-size: 25px;
+      padding: 25px;
+    }
 
   .pictureblocktitle {
       background-image: url("../img/bustop.jpg");
@@ -292,10 +296,17 @@ a:hover {
       color: #35CDD1;
       font-size: 30px;
     }
+
     .mywhy li:first-child:before {
       content: '';
       color: #35CDD1;
       font-size: 30px;
+    }
+
+    p.content {
+      font-size: 23px;
+      margin: 10px 0px 10px 0px;
+      line-height: 1.5em;
     }
 
 }
@@ -354,6 +365,7 @@ a:hover {
   	color: #35CDD1;
   	font-size: 22px;
   }
+
   .mywhy li:first-child:before {
   	content: '';
     color: #35CDD1;
@@ -368,7 +380,7 @@ a:hover {
   #mywhycontent {
     margin-left: 5px;
     margin-right: 5px;
-    font-size: 16px;
+    font-size: 18px;
   }
 
 
