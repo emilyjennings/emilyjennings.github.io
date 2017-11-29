@@ -33,7 +33,7 @@
     color: #C4EFDA;
     font-weight: bold;
     margin: 40px 10px 20px 10px;
-    padding: 100px;
+    padding: 200px;
 
 }
 
@@ -257,15 +257,16 @@ a:hover {
   .background-image h1 {
     position: relative;
     z-index: 2;
-    font-size: 60px;
+    font-size: 65px;
     width: 100%;
     color: #C4EFDA;
     font-weight: bold;
     margin: 10px 10px 20px 10px;
-    padding: 100px;
+    padding: 80px;
+
     }
 
-  .mywhy {
+    .mywhy {
       font-size: 40px;
       margin: 20px 55px 20px 55px;
       padding: 10px;
@@ -278,12 +279,12 @@ a:hover {
       padding: 25px;
     }
 
-  .pictureblocktitle {
+    .pictureblocktitle {
       background-image: url("../img/bustop.jpg");
       background-position: top center;
     }
 
-  .pictureblocktitle h3 {
+    .pictureblocktitle h3 {
       font-size: 20px
     }
 

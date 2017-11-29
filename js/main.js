@@ -1,6 +1,6 @@
 $(document).ready(function(){
-
-/*  var AnimateName = function(){
+  
+    var AnimateName = function(){
     $('#myname').animate({
       opacity: '1.0',
     }, 1500)
@@ -27,34 +27,20 @@ $(document).ready(function(){
 
   $(window).scroll(function(){
     if ($(this).scrollTop()>80){
-      $('#mywhycontent').fadeIn(4000);
-      }
-  });
-
-  $(window).scroll(function(){
-    if ($(this).scrollTop()>80){
+//      $('#mywhycontent').fadeIn(4000);
       $('.floatblock').fadeIn(4000);
     }
   });
 
-
-
-/*  $( ".cross" ).hide();
-  $( ".menu" ).hide();
-  $( ".hamburger" ).click(function() {
-    $( ".menu" ).slideToggle( "slow", function() {
-      $( ".hamburger" ).hide();
-      $( ".cross" ).show();
-    });
-  });
-
-  $( ".cross" ).click(function() {
-    $( ".menu" ).slideToggle( "slow", function() {
-      $( ".cross" ).hide();
-      $( ".hamburger" ).show();
+  /*$(window).scroll(function(){
+    if ($(this).scrollTop()>80){
+      $('.floatblock').fadeIn(4000);
+    }
   }); */
 
-//  $("#cross").hide();
+
+
+
   $(".nav").hide();
   $("#hamburger").click(function(){
     $(".nav").slideToggle("slow", function(){
@@ -65,7 +51,9 @@ $(document).ready(function(){
   });
 
 
-  $("#cross").click(function(){
+  $("#cross").click(function(event){
+    event.preventDefault();
+    //click event that takes information from the event and prevents refresh
     if ($("#cross").is(":visible")){
       $(".nav").slideToggle("slow", function(){
         $("#cross").hide();
