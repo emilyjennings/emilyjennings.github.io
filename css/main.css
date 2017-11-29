@@ -18,23 +18,40 @@
   color: #C4EFDA;
 }
 
+.nav {
+  overflow: hidden;
+  background-color: #3B4548;
+  position: fixed;
+  top: 0;
+  right: 0;
+  border-radius: 5px 5px 5px 5px;
+  margin: 10px;
+  border: 1px solid #35CDD1;
+  display: block;
+  line-height: 2.5em;
+  font-family: monospace;
+  font-size: 16px;
+  padding: 8px;
+  opacity: 0.8;
+  z-index: 100;
+}
+
 .background-image {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 .background-image h1 {
-    position: relative;
-    z-index: 2;
-    font-size: 70px;
-    text-align: center;
-    padding: 10px;
-    color: #C4EFDA;
-    font-weight: bold;
-    margin: 40px 10px 20px 10px;
-    padding: 200px;
-
+  position: relative;
+  z-index: 2;
+  font-size: 70px;
+  text-align: center;
+  padding: 10px;
+  color: #C4EFDA;
+  font-weight: bold;
+  margin: 40px 10px 20px 10px;
+  padding: 100px;
 }
 
 .background-image img {
@@ -69,24 +86,6 @@ body {
   background-position: top;
   background-repeat: no-repeat;
   scroll-behavior: smooth;
-}
-
-
-.nav {
-    overflow: hidden;
-    background-color: #3B4548;
-    position: fixed;
-    top: 0;
-    right: 0;
-    border-radius: 5px 5px 5px 5px;
-    margin: 10px;
-    border: 1px solid #35CDD1;
-    display: block;
-    line-height: 2.5em;
-    font-family: monospace;
-    font-size: 16px;
-    padding: 8px;
-    opacity: 0.8;
 }
 
 
@@ -126,7 +125,7 @@ h2 {
 
 .mywhy li {
   display: inline-block;
-  opacity: 0;
+
 }
 
 .mywhy li:before {
@@ -138,6 +137,9 @@ h2 {
 	content: '';
 }
 
+#e, #a, #g, #d {
+  display: none;
+}
 
 #mywhycontent {
   margin-left: 40px;
@@ -208,11 +210,9 @@ p.content {
   border-radius: 20px;
 }
 
-
 p {
   margin-bottom: 1em;
 }
-
 
 a:link, a:visited {
   color: #35CDD1;
@@ -230,29 +230,25 @@ a:hover {
 @media all and (max-width: 768px) {
 
   .nav {
-      overflow: hidden;
-      background-color: #3B4548;
-      position: fixed;
-      border-radius: 5px;
-      margin: 5px;
-      border: 1px solid #35CDD1;
-      line-height: 2.5em;
-      font-family: monospace;
-      font-size: 12px;
-      padding: 10px;
-      opacity: 0.8;
-      width: 80px;
-    }
+    font-size: 18px;
+    padding: 10px;
+    opacity: 0.8;
+    width: 100px;
+  }
 
-    .subtitle h2 {
-      font-size: 50px;
-    }
+  #hamburger {
+    font-size: 35px;
+  }
+
+  .subtitle h2 {
+    font-size: 50px;
+  }
 
   .floatblock {
-      width: 100%;
-      float: left;
-      font-size: 16px;
-    }
+    width: 100%;
+    float: left;
+    font-size: 16px;
+  }
 
   .background-image h1 {
     position: relative;
@@ -319,6 +315,10 @@ a:hover {
     margin: 25px 10px 10px 10px;
   }
 
+  #hamburger {
+    font-size: 20px;
+  }
+
   .background-image {
     padding: 10px;
   }
@@ -330,7 +330,7 @@ a:hover {
     color: #C4EFDA;
     font-weight: bold;
     margin: 10px 10px 20px 10px;
-    padding: 10px;
+    padding: 30px;
   }
 
   .subtitle h2 {
