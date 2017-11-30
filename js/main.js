@@ -1,44 +1,8 @@
 $(document).ready(function(){
 
-    var AnimateName = function(){
-    $('#myname').animate({
-      opacity: '1.0',
-    }, 1500)
-  };
-
-  $(AnimateName).show()
-
-//  var AnimateSummary = function(){
   $('#summary').animate({
     opacity: '1.0',
-  }, 3000);
-//  };
-
-//  $(AnimateSummary).show()
-
-
-  /*$(window).scroll(function(){
-    if ($(this).scrollTop()>40){
-      $('.mywhy li').animate({
-        opacity: '1.0'
-      }, 8000);
-//    }
-//  }); */
-
-//  $(window).scroll(function(){
-//    if ($(this).scrollTop()>80){
-//      $('#mywhycontent').fadeIn(4000);
-//      $('.floatblock').fadeIn(4000);
-//    }
-//  });
-
-  /*$(window).scroll(function(){
-    if ($(this).scrollTop()>80){
-      $('.floatblock').fadeIn(4000);
-    }
-  }); */
-
-
+  }, 4000);
 
 
   $(".nav").hide();
@@ -62,28 +26,18 @@ $(document).ready(function(){
     }
   });
 
-setInterval(function() {
-  $('#e').fadeIn(1000, function(){
-    $('#a').fadeIn(1000, function(){
-      $('#g').fadeIn(1000, function(){
-        $('#d').fadeIn(1000, function(){
-          if ($("#d").is(":visible")){
 
-          }
+  var fadeIn = setInterval(function(){
+    $('#e').fadeIn(1000, function(){
+      $('#a').fadeIn(1000, function(){
+        $('#g').fadeIn(1000, function(){
+          $('#d').fadeIn(1000, function(){
+          });
         });
       });
     });
   });
-}, 1000);
 
-var fadeOutWhy = $('#e').fadeOut(1000, function(){
-  $('#a').fadeOut(1000, function(){
-    $('#g').fadeOut(1000, function(){
-      $('#d').fadeOut(1000, function(){
-      });
-    });
-  });
-});
 
 
 
