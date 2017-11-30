@@ -68,14 +68,7 @@ setInterval(function() {
       $('#g').fadeIn(1000, function(){
         $('#d').fadeIn(1000, function(){
           if ($("#d").is(":visible")){
-            $('#e').fadeOut(1000, function(){
-              $('#a').fadeOut(1000, function(){
-                $('#g').fadeOut(1000, function(){
-                  $('#d').fadeOut(1000, function(){
-                  });
-                });
-              });
-            });
+
           }
         });
       });
@@ -83,7 +76,14 @@ setInterval(function() {
   });
 }, 1000);
 
-
+var fadeOutWhy = $('#e').fadeOut(1000, function(){
+  $('#a').fadeOut(1000, function(){
+    $('#g').fadeOut(1000, function(){
+      $('#d').fadeOut(1000, function(){
+      });
+    });
+  });
+});
 
 
 
