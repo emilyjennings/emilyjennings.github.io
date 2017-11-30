@@ -192,7 +192,6 @@ p.content {
 .floatblock {
   width: 50%;
   float: left;
-  display: none;
 }
 
 .pictureblocktitle {
@@ -227,6 +226,12 @@ a:hover {
   font-size: 19px
 }
 
+#top {
+  width: auto 0;
+  text-align: center;
+  padding: 20px;
+}
+
 @media all and (max-width: 768px) {
 
   .nav {
@@ -259,52 +264,51 @@ a:hover {
     font-weight: bold;
     margin: 10px 10px 20px 10px;
     padding: 80px;
+  }
 
-    }
+  .mywhy {
+    font-size: 40px;
+    margin: 20px 55px 20px 55px;
+    padding: 10px;
+  }
 
-    .mywhy {
-      font-size: 40px;
-      margin: 20px 55px 20px 55px;
-      padding: 10px;
-    }
+  #mywhycontent {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 25px;
+    padding: 25px;
+  }
 
-    #mywhycontent {
-      margin-left: 5px;
-      margin-right: 5px;
-      font-size: 25px;
-      padding: 25px;
-    }
+  .pictureblocktitle {
+    background-image: url("../img/bustop.jpg");
+    background-position: top center;
+  }
 
-    .pictureblocktitle {
-      background-image: url("../img/bustop.jpg");
-      background-position: top center;
-    }
+  .pictureblocktitle h3 {
+    font-size: 20px
+  }
 
-    .pictureblocktitle h3 {
-      font-size: 20px
-    }
+  .mywhy li {
+    display: block;
+  }
 
-    .mywhy li {
-      display: block;
-    }
+  .mywhy li:before {
+    content: '';
+    color: #35CDD1;
+    font-size: 30px;
+  }
 
-    .mywhy li:before {
-      content: '';
-      color: #35CDD1;
-      font-size: 30px;
-    }
+  .mywhy li:first-child:before {
+    content: '';
+    color: #35CDD1;
+    font-size: 30px;
+  }
 
-    .mywhy li:first-child:before {
-      content: '';
-      color: #35CDD1;
-      font-size: 30px;
-    }
-
-    p.content {
-      font-size: 23px;
-      margin: 10px 0px 10px 0px;
-      line-height: 1.5em;
-    }
+  p.content {
+    font-size: 23px;
+    margin: 10px 0px 10px 0px;
+    line-height: 1.5em;
+  }
 
 }
 
