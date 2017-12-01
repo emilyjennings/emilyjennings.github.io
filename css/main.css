@@ -329,9 +329,12 @@ img {
 }
 
 .nav-gallery a.is-active {
-  background-color: #747E7A;
-  color: #C4EFDA;
+  color: #747E7A;
   text-decoration: none;
+}
+
+.nav-gallery a:hover {
+  color: #747E7A;
 }
 
 body#about {
