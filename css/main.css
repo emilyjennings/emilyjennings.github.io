@@ -348,6 +348,24 @@ body#about {
   scroll-behavior: smooth;
 }
 
+h1.title {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  background-color: #3B4548;
+  border-radius: 5px 5px 5px 5px;
+  border: 1px solid #35CDD1;
+  opacity: 0.8;
+  margin: 100px 10px 100px 10px;
+  padding: 80px;
+  position: relative;
+  z-index: 2;
+  font-size: 60px;
+  text-align: center;
+  color: #C4EFDA;
+  font-weight: bold;
+}
+
 
 
 @media all and (max-width: 768px) {
@@ -446,6 +464,14 @@ body#about {
   .aboutemilyblock {
     font-size: 15px;
     margin: 10px;
+  }
+
+  h1.title {
+    padding: 20px;
+  }
+
+  .aboutemilyblock {
+    line-height: 1.4em;
   }
 
 
