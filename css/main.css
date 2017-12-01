@@ -61,6 +61,17 @@
   width: 100%;
   height: auto;
   opacity: 0.4;
+  border: none;
+}
+
+.title h1 {
+  position: relative;
+  z-index: 2;
+  font-size: 60px;
+  text-align: center;
+  padding: 30px;
+  color: #C4EFDA;
+  font-weight: bold;
 }
 
 .subtitle h2 {
@@ -75,7 +86,6 @@
 .fadebody {
   display: none;
 }
-
 
 body {
   color: #E3F3F3;
@@ -232,13 +242,118 @@ a:hover {
   padding: 20px;
 }
 
+.aboutemilyblock {
+  display: block;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border: 10px solid #23C6B3;
+  border-radius: 20px;
+  background: #C4EFDA;
+  font-size: 18px;
+  padding: 20px;
+  letter-spacing: .5px;
+  color: #747E7A;
+  text-indent: 30px;
+  line-height: 30px;
+  font-family: monospace;
+}
+
+.question {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.container {
+  margin: 0 20px 0 20px;
+
+}
+
+.row {
+  width: 100%;
+  clear: both;
+  overflow: auto;
+}
+
+.col {
+  width: 33%;
+  float: left;
+}
+
+.col.col-full {
+  width: 100%;
+  float: none;
+
+}
+
+h2.title-gallery {
+  text-align: left;
+  margin-left: 5px;
+}
+
+
+.nav-gallery {
+  text-align: left;
+  font-style: italic;
+  font-family: Georgia, serif;
+  font-size: 30px;
+  color: #35CDD1;
+  width: 100%;
+}
+
+.nav-gallery li {
+    display: inline-block;
+    color: #747E7A;
+    border: 5px solid #23C6B3;
+    border-radius: 18px;
+    background: #C4EFDA;
+    padding: 10px;
+    width: 32.5%;
+    text-align: center;
+}
+
+img {
+  border: 5px solid #23C6B3;
+  border-radius: 10px;
+  width: 100%;
+  padding: 5px 5px 5px 5px;
+}
+
+#contactimg img {
+  width: 50%;
+}
+
+#philly, #korea, #south {
+  display: none;
+}
+
+
+
+
+
 @media all and (max-width: 768px) {
+
+  .col {
+    width: 100%;
+  }
 
   .nav {
     font-size: 18px;
     padding: 10px;
     opacity: 0.8;
     width: 100px;
+  }
+
+  .nav-gallery li {
+    display: block;
+    color: #747E7A;
+    border: 5px solid #23C6B3;
+    border-radius: 18px;
+    background: #C4EFDA;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
   }
 
   #hamburger {
@@ -309,6 +424,13 @@ a:hover {
     margin: 10px 0px 10px 0px;
     line-height: 1.5em;
   }
+
+  .aboutemilyblock {
+    font-size: 15px;
+    margin: 10px;
+  }
+
+
 
 }
 

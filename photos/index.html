@@ -4,68 +4,95 @@
     <meta charset="utf-8">
     <title>Photos</title>
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/photo.css">
+    <link rel="stylesheet" href="../css/main.css">
     <meta name="viewport" content="width=device-width, initial-scale1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
     <script src="../js/main.js" charset="utf-8"></script>
   </head>
 
   <body>
 
 
-    <h1>My Stories in Photos</h1>
+    <div class="title"><h1>My Stories in Photos</h1></div>
 
-    <p>I live in Philadelphia, which is a great city. I lived for years in Jeju, a volcanic island in South Korea. Sometimes I took trips from there to Bali, another volcanic island, to visit family I hadn't seen since I was 10. Before that, many years ago now, I lived in New Zealand and South Africa for extended periods as a student.</p>
+    <p class="content">I live in Philadelphia, which is a great city. I lived for years in Jeju, a volcanic island in South Korea. Sometimes I took trips from there to Bali, another volcanic island, to visit family I hadn't seen since I was 10. Before that, many years ago now, I lived in New Zealand and South Africa for extended periods as a student.</p>
 
+    <h2>View Gallery:</h2>
 
     <div class="container">
-      <h2>Living in Philly</h2>
-
       <div class="row">
-        <div class="col"><img src="../img/oldcity5.jpg" width=300></div>
-        <div class="col"><img src="../img/Oldcity3.JPG" width=300></div>
-        <div class="col"><img src="../img/oldcity6.jpg" width=300></div>
+        <div class="col col-full">
+          <nav class="nav-gallery">
+            <ul>
+              <li><a href="#philly">Philly</a></li>
+              <li><a href="#korea">Korea</a></li>
+              <li><a href="#south">Southern Hemisphere</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
-      <div class="row">
-        <div class="col"><img src="../img/Philly1.JPEG" width=300></div>
-        <div class="col"><img src="../img/kali3.jpg" width=300></div>
-        <div class="col"><img src="../img/elmo.jpg" width=300></div>
-      </div>
-
     </div>
 
 
-    <div class="container">
-      <h2>Jeju-do, South Korea: Teaching and Learning</h2>
+    <div id="philly">
+      <div class="container">
+        <div class="row">
+          <div class="col col-full"><h2 class="title-gallery">Living in Philly</h2></div>
+        </div>
 
-      <div class="row">
-        <div class="col"><img src="../img/jeju16.jpg" width=300></div>
-        <div class="col"><img src="../img/jejunew1.jpg" width=300></div>
-        <div class="col"><img src="../img/jejunew3.jpg" width=300></div>
-      </div>
-      <div class="row">
-        <div class="col"><img src="../img/jeju1.jpg" width=300></div>
-        <div class="col"><img src="../img/market.jpg" width=300></div>
-        <div class="col"><img src="../img/Gwakji1.jpg" width=300></div>
-      </div>
+        <div class="row">
+          <div class="col"><img src="../img/oldcity5.jpg"></div>
+          <div class="col"><img src="../img/Oldcity3.JPG"></div>
+          <div class="col"><img src="../img/oldcity6.jpg"></div>
+        </div>
+        <div class="row">
+          <div class="col"><img src="../img/Philly1.JPEG"></div>
+          <div class="col"><img src="../img/kali3.jpg"></div>
+          <div class="col"><img src="../img/elmo.jpg"></div>
+        </div>
 
+      </div>
     </div>
 
+    <div id="korea">
+      <div class="container">
+        <div class="row">
+          <div class="col col-full"><h2 class="title-gallery">Jeju-do, South Korea: Teaching and Learning</h2></div>
+        </div>
 
-    <div class="container">
-      <h2>Bali, New Zealand, and South Africa</h2>
+        <div class="row">
+          <div class="col"><img src="../img/jeju16.jpg"></div>
+          <div class="col"><img src="../img/jejunew1.jpg"></div>
+          <div class="col"><img src="../img/jejunew3.jpg"></div>
+        </div>
+        <div class="row">
+          <div class="col"><img src="../img/jeju1.jpg"></div>
+          <div class="col"><img src="../img/market.jpg"></div>
+          <div class="col"><img src="../img/Gwakji1.jpg"></div>
+        </div>
 
-      <div class="row">
-        <div class="col"><img src="../img/bali3.jpg" ></div>
-        <div class="col"><img src="../img/philband.jpg" ></div>
-        <div class="col"><img src="../img/rainbali.jpg" ></div>
       </div>
-      <div class="row">
-        <div class="col"><img src="../img/familyinbali.jpg" ></div>
-        <div class="col"><img src="../img/graduation.jpg" ></div>
-        <div class="col"><img src="../img/sa.jpg" ></div>
-      </div>
+    </div>
 
+    <div id="south">
+      <div class="container">
+        <div class="row">
+          <div class="col col-full"><h2 class="title-gallery">Bali, New Zealand, and South Africa: studying and visiting</h2></div>
+        </div>
+
+        <div class="row">
+          <div class="col"><img src="../img/bali3.jpg" ></div>
+          <div class="col"><img src="../img/philband.jpg" ></div>
+          <div class="col"><img src="../img/rainbali.jpg" ></div>
+        </div>
+        <div class="row">
+          <div class="col"><img src="../img/familyinbali.jpg" ></div>
+          <div class="col"><img src="../img/graduation.jpg" ></div>
+          <div class="col"><img src="../img/sa.jpg" ></div>
+        </div>
+
+      </div>
     </div>
 
     <button id="hamburger">&#9776;</button>
@@ -81,6 +108,8 @@
         <a href="../photos/index.html">Photos</a>
         <a href="" id="cross">&#735;</a>
     </div>
+
+    <div id="top"><p>Scroll Back to Top</p></div>
 
   </body>
 </html>

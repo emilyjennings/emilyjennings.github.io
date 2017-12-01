@@ -39,11 +39,38 @@ $(document).ready(function(){
   });
 
 
-
-
   $("#top").click(function(event){
     $.scrollTo(0, 1000)
   });
+
+  // making the gallery page select a photo group and display it
+
+
+
+  var displayGallery = function(whichGallery){
+    //hide all no matter what
+    $('#philly, #korea, #south').hide();
+    //select a group of Photos to display and display it
+    //$('#philly').show();
+    $(whichGallery).show();
+  };
+/*
+  $('#phillybutton').click(function(event){
+    event.preventDefault();
+    displayGallery();
+  });
+*/
+
+
+  $('.nav-gallery a').on('click', function(event){
+    event.preventDefault();
+    // get the href attr of "this" using a jQuery selector
+    var clicked = $(this).attr('href');
+    console.log(clicked);
+    displayGallery(clicked);
+  });
+
+
 
 
   /* var slideShow = 1
@@ -82,7 +109,6 @@ function showDivs(n) {
     }
     x[slideIndex-1].style.display = "block";
 } */
-
 
 
 
