@@ -328,7 +328,25 @@ img {
   display: none;
 }
 
+.nav-gallery a.is-active {
+  background-color: #747E7A;
+  color: #C4EFDA;
+  text-decoration: none;
+}
 
+body#about {
+  color: #E3F3F3;
+  font-family: Georgia, serif;
+  background: #3B4548;
+  margin: 20px 20px 20px 20px;
+  padding: 15px;
+  background-image: url('../img/bali2.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top;
+  background-size: contain;
+  scroll-behavior: smooth;
+}
 
 
 

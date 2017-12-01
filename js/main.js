@@ -64,6 +64,10 @@ $(document).ready(function(){
 
   $('.nav-gallery a').on('click', function(event){
     event.preventDefault();
+    //remove is active classes
+    $('.nav-gallery a').removeClass('is-active');
+    //add class of is-active
+    $(this).addClass('is-active');
     // get the href attr of "this" using a jQuery selector
     var clicked = $(this).attr('href');
     console.log(clicked);
