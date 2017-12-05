@@ -5,6 +5,7 @@ $(document).ready(function(){
   }, 4000);
 
 
+
   $(".nav").hide();
   $("#hamburger").click(function(){
     $(".nav").slideToggle("slow", function(){
@@ -27,21 +28,33 @@ $(document).ready(function(){
   });
 
 
-  var fadeIn = setInterval(function(){
-    $('#e').fadeIn(1000, function(){
-      $('#a').fadeIn(1000, function(){
-        $('#g').fadeIn(1000, function(){
-          $('#d').fadeIn(1000, function(){
+
+var fadeIn = setInterval(function(){
+      $('#e').fadeIn(1000, function(){
+        $('#a').fadeIn(1000, function(){
+          $('#g').fadeIn(1000, function(){
+            $('#d').fadeIn(1000, function(){
+
+            });
           });
         });
       });
     });
-  });
+
+
+
+
+  
+
+
 
 
   $("#top").click(function(event){
     $.scrollTo(0, 1000)
   });
+
+
+
 
   // making the gallery page select a photo group and display it
 
