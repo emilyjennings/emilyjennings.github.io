@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+
+
   $('#summary').animate({
     opacity: '1.0',
   }, 4000);
@@ -44,13 +46,50 @@ var fadeIn = setInterval(function(){
 
 
 
-  
-
-
-
-
   $("#top").click(function(event){
     $.scrollTo(0, 1000)
+  });
+
+//slideShow
+
+  var slides = $('.slideShow img');
+  console.log('slide ', slides);
+  var currentSlideIndex = 0;
+  var slideCount = slides.length; //shows the length of the array of imgaes
+  slides.eq(currentSlideIndex).show();
+
+  //hide the current one and show the next One
+   //leaving out the var keyword to test it out in the console
+
+  doSlides = function(direction){
+    //hide the cirrent slide
+    slides.eq(currentSlideIndex).fadeOut(function(){
+      if (direction === 'next') {
+        if (currentSlideIndex === slideCount - 1) {
+          currentSlideIndex = 0;
+          console.log('found the end, start back at 0')
+        } else {
+          currentSlideIndex++;
+        }
+
+      } else if (direction === "prev") {
+        if (currentSlideIndex == 0) {
+          currentSlideIndex = slideCount -1;
+        } else {
+        currentSlideIndex--;
+        }
+      console.log('currentSlideIndex: ', currentSlideIndex);
+      }
+      slides.eq(currentSlideIndex).fadeIn();
+    })
+  };
+
+  $('#next').click(function() {
+    doSlides('next');
+  });
+
+  $('#prev').click(function() {
+    doSlides('prev');
   });
 
 

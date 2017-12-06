@@ -368,6 +368,27 @@ h1.title {
   font-weight: bold;
 }
 
+.slideShow {
+  text-align: center;
+}
+
+.slideShow img {
+  display: none;
+  width: 300px;
+}
+
+#next {
+  bottom: 0;
+}
+
+#prev {
+  bottom: 0;
+}
+
+.buttons {
+  text-align: center;
+}
+
 
 
 @media all and (max-width: 768px) {
