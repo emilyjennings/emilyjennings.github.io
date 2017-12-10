@@ -63,7 +63,7 @@
   opacity: 0.4;
   border: none;
 }
-/*
+
 .title h1 {
   position: relative;
   z-index: 2;
@@ -78,7 +78,7 @@
   font-size: 40px;
   margin: 7%;
 }
-*/
+
 #summary {
   opacity: 0.01;
 }
@@ -439,6 +439,7 @@ h1#first {
 
   .subtitle h2 {
     font-size: 50px;
+
   }
 
   .floatblock {
