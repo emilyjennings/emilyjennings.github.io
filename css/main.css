@@ -63,7 +63,7 @@
   opacity: 0.4;
   border: none;
 }
-
+/*
 .title h1 {
   position: relative;
   z-index: 2;
@@ -78,7 +78,7 @@
   font-size: 40px;
   margin: 7%;
 }
-
+*/
 #summary {
   opacity: 0.01;
 }
@@ -374,7 +374,7 @@ h1.title {
 
 .slideShow img {
   display: none;
-  width: 300px;
+  width: 500px;
 }
 
 #next {
@@ -490,7 +490,8 @@ h1.title {
   }
 
   h1.title {
-    padding: 20px;
+    padding: 10px;
+    font-size: 40px
   }
 
   .aboutemilyblock {
