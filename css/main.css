@@ -359,12 +359,30 @@ h1.title {
   border: 1px solid #35CDD1;
   opacity: 0.8;
   margin: 100px 10px 100px 10px;
-  padding: 80px;
+  padding: 50px;
   position: relative;
   z-index: 2;
   font-size: 60px;
   text-align: center;
   color: #C4EFDA;
+  font-weight: bold;
+}
+
+h1#first {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  background-color: #C4EFDA;
+  border-radius: 5px 5px 5px 5px;
+  border: 1px solid #35CDD1;
+  opacity: 0.8;
+  margin: 100px 10px 100px 10px;
+  padding: 50px;
+  position: relative;
+  z-index: 2;
+  font-size: 80px;
+  text-align: center;
+  color: #3B4548;
   font-weight: bold;
 }
 
@@ -498,6 +516,14 @@ h1.title {
     line-height: 1.4em;
   }
 
+  h1#first {
+    font-size: 45px;
+  }
+
+  .testimonial {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
 
 
 }
