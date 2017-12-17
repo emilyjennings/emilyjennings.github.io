@@ -195,7 +195,7 @@ p.content {
   text-indent: 30px;
   line-height: 23px;
   font-family: monospace;
-  overflow: scroll;
+  overflow: none;
 }
 
 .floatblock {
@@ -204,18 +204,21 @@ p.content {
 }
 
 .pictureblocktitle {
-  position: relative;
-  z-index: 2;
   font-size: 40px;
   text-align: center;
-  padding: 10px;
   color: #C4EFDA;
   font-weight: bold;
-  margin: 50px 40px 20px 40px;
-  padding: 80px;
-  background-image: url("../img/rainbali2.jpg");
+  display: block;
+  width: 100%;
+  padding: 50px 10px;
+  background-image: url("../img/Bali13.jpg");
+  background-repeat: repeat;
+  opacity: .7;
   border: 10px solid #23C6B3;
   border-radius: 20px;
+  position: relative;
+  float: left;
+  margin: 50px auto;
 }
 
 p {
@@ -236,17 +239,18 @@ a:hover {
 }
 
 #top {
-  width: auto 0;
+  width: 100%;
   text-align: center;
   padding: 20px;
+  display: inline-block;
 }
 
 .aboutemilyblock {
   display: block;
   margin-left: 40px;
   margin-right: 40px;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
   border: 10px solid #23C6B3;
   border-radius: 20px;
   background: #C4EFDA;
@@ -266,7 +270,6 @@ a:hover {
 
 .container {
   margin: 0 20px 0 20px;
-
 }
 
 .row {
@@ -291,7 +294,6 @@ h2.title-gallery {
   margin-left: 5px;
 }
 
-
 .nav-gallery {
   text-align: left;
   font-style: italic;
@@ -302,14 +304,14 @@ h2.title-gallery {
 }
 
 .nav-gallery li {
-    display: inline-block;
-    color: #747E7A;
-    border: 5px solid #23C6B3;
-    border-radius: 18px;
-    background: #C4EFDA;
-    padding: 10px;
-    width: 32.5%;
-    text-align: center;
+  display: inline-block;
+  color: #747E7A;
+  border: 5px solid #23C6B3;
+  border-radius: 18px;
+  background: #C4EFDA;
+  padding: 10px;
+  width: 32.5%;
+  text-align: center;
 }
 
 img {
@@ -479,6 +481,10 @@ h1#first {
   .pictureblocktitle {
     background-image: url("../img/bustop.jpg");
     background-position: top center;
+    width: 100%;
+    float: left;
+    margin: 40px auto auto auto;
+    padding: 80px;
   }
 
   .pictureblocktitle h3 {
