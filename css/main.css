@@ -373,10 +373,9 @@ h1#first {
   display: inline-block;
   text-align: center;
   width: auto;
-  background-color: #C4EFDA;
+  background-color: #23C6B3;
+  opacity: 0.9;
   border-radius: 5px 5px 5px 5px;
-  border: 1px solid #35CDD1;
-  opacity: 0.8;
   margin: 100px 100px 100px 100px;
   padding: 50px;
   position: relative;
