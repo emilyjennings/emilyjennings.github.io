@@ -74,18 +74,28 @@
   font-weight: bold;
 }
 
+/*
 .subtitle h2 {
   font-size: 40px;
   margin: 7%;
 }
+*/
 
 #summary {
   opacity: 0.01;
+  border-radius: 5px 5px 5px 5px;
+  margin: 10px;
+  border: 1px solid #35CDD1;
+  display: block;
+  background-color: #3B4548;
+  padding: 8px;
 }
 
+/*
 .fadebody {
   display: none;
 }
+*/
 
 body {
   color: #E3F3F3;
@@ -206,7 +216,7 @@ p.content {
 .pictureblocktitle {
   font-size: 40px;
   text-align: center;
-  color: #C4EFDA;
+
   font-weight: bold;
   display: block;
   width: 100%;
@@ -227,6 +237,7 @@ p {
 
 a:link, a:visited {
   color: #35CDD1;
+  text-decoration: none;
 }
 
 a:hover {
@@ -381,7 +392,6 @@ h1#first {
   position: relative;
   z-index: 2;
   font-size: 80px;
-  text-align: center;
   color: #3B4548;
   font-weight: bold;
 }
@@ -411,6 +421,28 @@ h1#first {
   font-weight: bold;
   font-size: 1.2em;
 }
+
+/*
+.devicon-twitter-plain {
+  font-size: 40px;
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+*/
+
+i.fa {
+  font-size: 80px;
+  color: #35CDD1;
+  padding: 10px;
+}
+
+.subtitle {
+  display: block;
+  padding: 30px;
+  text-align: center;
+}
+
 
 
 

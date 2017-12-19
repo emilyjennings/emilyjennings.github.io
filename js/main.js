@@ -3,7 +3,7 @@ $(document).ready(function(){
 
 
   $('#summary').animate({
-    opacity: '1.0',
+    opacity: '0.8',
   }, 4000);
 
 
