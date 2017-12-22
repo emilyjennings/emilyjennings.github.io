@@ -2,13 +2,24 @@
   box-sizing: border-box;
 }
 
+body {
+  color: #E3F3F3;
+  font-family: Georgia, serif;
+  background: #3B4548;
+  /* margin: 20px;
+  padding: 15px; */
+  background-position: top;
+  background-repeat: no-repeat;
+  scroll-behavior: smooth;
+}
+
 #hamburger {
   background-color: #3B4548;
   position: fixed;
   top: 0;
   right: 0;
   border-radius: 5px 5px 5px 5px;
-  margin: 10px;
+  margin: 20px;
   border: 1px solid #35CDD1;
   line-height: 2.5em;
   font-family: monospace;
@@ -40,6 +51,7 @@
   position: relative;
   overflow: hidden;
   border-radius: 10px;
+  margin: 20px;
 }
 
 .background-image h1 {
@@ -96,17 +108,6 @@
   display: none;
 }
 */
-
-body {
-  color: #E3F3F3;
-  font-family: Georgia, serif;
-  background: #3B4548;
-  margin: 20px;
-  padding: 15px;
-  background-position: top;
-  background-repeat: no-repeat;
-  scroll-behavior: smooth;
-}
 
 
 h2 {
@@ -178,12 +179,12 @@ h2 {
 }
 
 .blocktitle {
-  text-align: left;
+  width: 100%;
   font-style: italic;
   font-family: Georgia, serif;
   font-size: 30px;
   color: #C4EFDA;
-  margin: 40px auto auto auto;
+  margin: 40px;
 }
 
 h3 {
@@ -211,24 +212,7 @@ p.content {
 .floatblock {
   width: 50%;
   float: left;
-  overflow: auto;
-}
-
-.pictureblocktitle {
-  font-size: 40px;
-  text-align: center;
-  font-weight: bold;
-  display: block;
-  width: 100%;
-  padding: 50px 10px;
-  background-image: url("../img/Bali13.jpg");
-  background-repeat: repeat;
-  opacity: .7;
-  border: 10px solid #23C6B3;
-  border-radius: 20px;
-  position: relative;
-  float: left;
-  margin: 50px auto;
+  overflow: none;
 }
 
 p {
@@ -365,15 +349,12 @@ body#about {
 
 h1.title {
   display: block;
-  width: 100%;
   background-color: #3B4548;
   border-radius: 5px 5px 5px 5px;
   border: 1px solid #35CDD1;
   opacity: 0.8;
-  margin: 80px 0px;
+  margin: 50px 100px 80px 100px;
   padding: 40px;
-  position: relative;
-  z-index: 2;
   font-size: 60px;
   text-align: center;
   color: #C4EFDA;
@@ -381,16 +362,13 @@ h1.title {
 }
 
 h1#first {
-  display: inline-block;
+  display: block;
   text-align: center;
-  width: auto;
   background-color: #23C6B3;
   opacity: 0.9;
   border-radius: 5px 5px 5px 5px;
-  margin: 20px 100px 100px 100px;
+  margin: 50px 100px 80px 100px;
   padding: 50px;
-  position: relative;
-  z-index: 2;
   font-size: 80px;
   color: #3B4548;
   font-weight: bold;
@@ -557,16 +535,14 @@ i.fa-lightbulb-o {
   }
 
   h1.title {
-    padding: 10px;
-    font-size: 40px;
+    padding: 8px;
+    font-size: 50px;
+  
+    margin: 30px 20px;
   }
 
   .aboutemilyblock {
     line-height: 1.4em;
-  }
-
-  h1#first {
-    font-size: 45px;
   }
 
   i.fa {
@@ -587,7 +563,13 @@ i.fa-lightbulb-o {
   }
 
   h1#first {
-    margin: 25px;
+    margin: 20px;
+    font-size: 45px;
+    margin-bottom: 50px;
+  }
+
+  h2#summary {
+    font-size: 30px;
   }
 
 
