@@ -27,6 +27,7 @@ body {
   padding: 1px 13px;
   opacity: 0.8;
   color: #C4EFDA;
+  z-index: 100;
 }
 
 .nav {
@@ -264,29 +265,28 @@ a:hover {
 }
 
 .container {
-  margin: 0 20px 0 20px;
+  margin: 20px;
 }
 
 .row {
   width: 100%;
   clear: both;
-  overflow: auto;
+  overflow: none;
 }
 
 .col {
-  width: 33%;
+  width: 33.3333%;
   float: left;
 }
 
 .col.col-full {
   width: 100%;
   float: none;
-
 }
 
 h2.title-gallery {
   text-align: left;
-  margin-left: 5px;
+  margin: 5px;
 }
 
 .nav-gallery {
@@ -296,6 +296,7 @@ h2.title-gallery {
   font-size: 30px;
   color: #35CDD1;
   width: 100%;
+  margin: 10px;
 }
 
 .nav-gallery li {
@@ -537,7 +538,6 @@ i.fa-lightbulb-o {
   h1.title {
     padding: 8px;
     font-size: 50px;
-  
     margin: 30px 20px;
   }
 
