@@ -87,13 +87,6 @@ body {
   font-weight: bold;
 }
 
-/*
-.subtitle h2 {
-  font-size: 40px;
-  margin: 7%;
-}
-*/
-
 #summary {
   opacity: 0.01;
   border-radius: 5px 5px 5px 5px;
@@ -103,13 +96,6 @@ body {
   background-color: #3B4548;
   padding: 8px;
 }
-
-/*
-.fadebody {
-  display: none;
-}
-*/
-
 
 h2 {
   text-align: center;
@@ -195,8 +181,6 @@ h3 {
 p.content {
   margin-left: 40px;
   margin-right: 40px;
-  margin-top: 20px;
-  margin-bottom: 10px;
   border: 10px solid #23C6B3;
   border-radius: 18px;
   background: #C4EFDA;
@@ -401,17 +385,6 @@ h1#first {
   font-size: 1.2em;
 }
 
-
-
-/*
-.devicon-twitter-plain {
-  font-size: 40px;
-  float: left;
-  width: 25%;
-  padding: 10px;
-}
-*/
-
 i.fa {
   font-size: 80px;
   color: #35CDD1;
@@ -429,7 +402,20 @@ i.fa-lightbulb-o {
   padding-bottom: 0;
 }
 
+.Thankblock {
+  border-radius: 5px 5px 5px 5px;
+  margin: 40px;
+  border: 5px solid #35CDD1;
+  padding: 10px;
+  clear: both;
+  text-align: center;
+  background-image: url('../img/Bali13.jpg');
+}
 
+.container2 {
+  display: inline-block;
+  margin: 30px;
+}
 
 
 
@@ -487,8 +473,8 @@ i.fa-lightbulb-o {
   }
 
   #mywhycontent {
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
     font-size: 25px;
     padding: 25px;
   }
@@ -526,11 +512,6 @@ i.fa-lightbulb-o {
     font-size: 23px;
     margin: 10px 0px 10px 0px;
     line-height: 1.5em;
-  }
-
-  .aboutemilyblock {
-    font-size: 15px;
-    margin: 10px;
   }
 
   h1.title {
@@ -575,10 +556,7 @@ i.fa-lightbulb-o {
 
 @media all and (max-width: 450px) {
 
-  body {
-    padding: 0;
-    margin: 25px 10px 10px 10px;
-  }
+
 
   #hamburger {
     font-size: 20px;
@@ -639,15 +617,11 @@ i.fa-lightbulb-o {
   }
 
   p.content {
-    font-size: 15px;
-    margin: 10px 0px 10px 0px;
+    font-size: 18px;
+    margin: 20px;
   }
 
-  #mywhycontent {
-    margin-left: 5px;
-    margin-right: 5px;
-    font-size: 18px;
-  }
+
 
 
 
