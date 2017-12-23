@@ -101,7 +101,7 @@ var fadeIn = setInterval(function(){
 
   var displayGallery = function(whichGallery){
     //hide all no matter what
-    $('#philly, #korea, #south').hide();
+    $('#philly, #korea, #south, #tech, #crazy, #creative, #bed, #world, #mom').hide();
     //select a group of Photos to display and display it
     //$('#philly').show();
     $(whichGallery).show();
@@ -128,6 +128,30 @@ var fadeIn = setInterval(function(){
 
 
 
+  $("#bottom").click(function(event){
+    $.scrollTo(20000, 1000)
+  });
+
+/*
+
+  var displayGallery = function(whichGallery){
+    $('#tech, #crazy, #creative, #bed', "#world", "#mom").hide();
+    $(whichGallery).show();
+  };
+
+  $('.nav-gallery a').on('click', function(event){
+    event.preventDefault();
+    //remove is active classes
+    $('.nav-gallery a').removeClass('is-active');
+    //add class of is-active
+    $(this).addClass('is-active');
+    // get the href attr of "this" using a jQuery selector
+    var clicked = $(this).attr('href');
+    console.log(clicked);
+    displayGallery(clicked);
+  });
+
+*/
 
   /* var slideShow = 1
   showTitle(slideShow)

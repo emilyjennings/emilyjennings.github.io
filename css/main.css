@@ -321,7 +321,7 @@ img {
   width: 50%;
 }
 
-#philly, #korea, #south {
+#philly, #korea, #south, #tech, #crazy, #creative, #bed, #world, #mom {
   display: none;
 }
 
@@ -432,6 +432,8 @@ i.fa-lightbulb-o {
 
 
 
+
+
 @media all and (max-width: 768px) {
 
   .col {
@@ -455,8 +457,6 @@ i.fa-lightbulb-o {
     width: 100%;
     text-align: center;
   }
-
-
 
   .subtitle h2 {
     font-size: 50px;
