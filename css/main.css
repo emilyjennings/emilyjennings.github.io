@@ -516,7 +516,7 @@ i.fa-lightbulb-o {
 
   h1.title {
     padding: 8px;
-    font-size: 50px;
+    font-size: 40px;
     margin: 30px 20px;
   }
 
@@ -622,7 +622,9 @@ i.fa-lightbulb-o {
   }
 
 
-
+  h1.title {
+    font-size: 35px;
+  }
 
 
 
