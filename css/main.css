@@ -417,6 +417,10 @@ i.fa-lightbulb-o {
   margin: 30px;
 }
 
+a#cross {
+  font-size: 25px;
+}
+
 
 
 
@@ -427,8 +431,8 @@ i.fa-lightbulb-o {
   }
 
   .nav {
-    font-size: 18px;
-    padding: 10px;
+    font-size: 16px;
+    padding: 7px;
     opacity: 0.8;
     width: 100px;
   }
@@ -551,6 +555,16 @@ i.fa-lightbulb-o {
     font-size: 30px;
   }
 
+  .nav a {
+    width: 100%;
+    display: block;
+    float: left;
+  }
+
+  a#cross {
+    text-align: center;
+    font-size: 40px;
+  }
 
 }
 
