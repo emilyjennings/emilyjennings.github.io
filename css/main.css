@@ -421,6 +421,16 @@ a#cross {
   font-size: 25px;
 }
 
+.twitter {
+  text-align: center;
+  margin: 40px;
+}
+
+html.sandboxroot.env-bp-660 {
+  border: 5px solid #35CDD1;
+  border-radius: 5px 5px 5px 5px;
+}
+
 
 
 
