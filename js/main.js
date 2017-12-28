@@ -44,10 +44,23 @@ var fadeIn = setInterval(function(){
     });
 
 
-
+//scroll to top effect
 
   $("#top").click(function(event){
     $.scrollTo(0, 1000)
+  });
+
+  $(document).scroll(function(){
+    var y = $('#top').scrollTop();
+    if (y < 100) {
+      $('#top').animate({
+        opacity: '0.8',
+      }, 4000);
+    } else if (y > 100){
+      $('#top').animate({
+        opacity: '0',
+      }, 4000);
+    }
   });
 
 //slideShow

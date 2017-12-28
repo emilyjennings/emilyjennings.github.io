@@ -179,8 +179,8 @@ h3 {
 }
 
 p.content {
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 50px;
+  margin-right: 50px;
   border: 10px solid #23C6B3;
   border-radius: 18px;
   background: #C4EFDA;
@@ -219,10 +219,19 @@ a:hover {
 }
 
 #top {
-  width: 100%;
   text-align: center;
-  padding: 20px;
-  display: inline-block;
+  padding: 10px;
+  display: block;
+  margin: 30px auto;
+  font-size: 20px;
+  border: 3px solid #23C6B3;
+  border-radius: 80px;
+  background: #C4EFDA;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  z-index: 100;
+  opacity: 0;
 }
 
 .aboutemilyblock {
@@ -404,7 +413,7 @@ i.fa-lightbulb-o {
 
 .Thankblock {
   border-radius: 5px 5px 5px 5px;
-  margin: 40px;
+  margin: 50px;
   border: 5px solid #35CDD1;
   padding: 10px;
   clear: both;
@@ -429,6 +438,10 @@ a#cross {
 html.sandboxroot.env-bp-660 {
   border: 5px solid #35CDD1;
   border-radius: 5px 5px 5px 5px;
+}
+
+.instagram {
+
 }
 
 
