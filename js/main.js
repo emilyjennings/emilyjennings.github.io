@@ -47,19 +47,19 @@ var fadeIn = setInterval(function(){
 //scroll to top effect
 
   $("#top").click(function(event){
-    $.scrollTo(0, 1000)
+    $.scrollTo(0, 1000);
   });
 
-  $(document).scroll(function(){
-    var y = $('#top').scrollTop();
-    if (y < 100) {
+  $(window).scroll(function(){
+    var scrollTop = $(window).scrollTop()
+    if (scrollTop > 100) {
       $('#top').animate({
-        opacity: '0.8',
-      }, 4000);
-    } else if (y > 100){
+        opacity: '0.75',
+      }, 1000);
+    } else if (scrollTop < 10){
       $('#top').animate({
-        opacity: '0',
-      }, 4000);
+        opacity: '0.0',
+      }, 1000);
     }
   });
 
