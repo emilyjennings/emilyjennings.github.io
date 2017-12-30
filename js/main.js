@@ -52,14 +52,14 @@ var fadeIn = setInterval(function(){
 
   $(window).scroll(function(){
     var scrollTop = $(window).scrollTop()
-    if (scrollTop > 100) {
+    if (scrollTop > 500) {
       $('#top').animate({
         opacity: '0.75',
       }, 1000);
-    } else if (scrollTop < 10){
+    } else if (scrollTop < 500){
       $('#top').animate({
         opacity: '0.0',
-      }, 1000);
+      }, 100);
     }
   });
 
