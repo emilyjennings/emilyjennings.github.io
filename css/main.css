@@ -76,7 +76,7 @@ body {
   opacity: 0.4;
   border: none;
 }
-
+/*
 .title h1 {
   position: relative;
   z-index: 2;
@@ -86,7 +86,7 @@ body {
   color: #C4EFDA;
   font-weight: bold;
   margin-top: 100px;
-}
+}*/
 
 .aboutblock1 {
   margin-top: 100px;
@@ -599,7 +599,7 @@ p.col2  i.fa {
 
   p.content {
     font-size: 23px;
-    margin: 10px 0px 10px 0px;
+    margin: 20px;
     line-height: 1.5em;
   }
 
