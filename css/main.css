@@ -316,7 +316,7 @@ h2.title-gallery {
   font-size: 30px;
   color: #35CDD1;
   width: 100%;
-  margin: 10px;
+  margin: auto;
 }
 
 .nav-gallery li {
@@ -493,7 +493,6 @@ p.col2  i.fa {
   width: 100%;
   padding: 10px 20%;
 }
-
 
 .skillrow {
   display: block;
