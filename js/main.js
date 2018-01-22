@@ -145,6 +145,22 @@ var fadeIn = setInterval(function(){
     $.scrollTo(20000, 1000)
   });
 
+
+
+  $('i.fa.fa-lightbulb-o').animate({
+    opacity: '0',
+  }, 300).animate({
+    opacity: '1',
+  }, 300).animate({
+    opacity: '0',
+  }, 300).animate({
+    opacity: '1'
+  }, 300).animate({
+    opacity: '0',
+  }, 300).animate({
+    opacity: '1'
+  }, 1000);
+
 /*
 
   var displayGallery = function(whichGallery){
