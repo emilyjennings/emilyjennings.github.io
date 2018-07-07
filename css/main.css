@@ -380,6 +380,20 @@ h1#first {
   font-weight: bold;
 }
 
+#blogtitle {
+  display: block;
+  text-align: center;
+  width: 50%;
+  background-color: #23C6B3;
+  opacity: 0.9;
+  border-radius: 5px 5px 5px 5px;
+  margin: 50px 100px 80px 100px;
+  padding: 30px;
+  font-size: 40px;
+  color: #3B4548;
+  font-weight: bold;
+}
+
 .slideShow {
   text-align: center;
 }
