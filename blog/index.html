@@ -14,6 +14,58 @@
       <h1 id="first">Learning Blog</h1>
     </div>
 
+    <h3><div class="blocktitle">August 2nd, 2018</div></h3>
+
+    <div id="blogtitle">OO Kickstarter Lab: returning arrays</div>
+
+    <div class="aboutemilyblock">
+      <p>I took on <a href="https://github.com/emilyjennings/oo-kickstarter-flatiron-staff">this lab</a> feeling good that I'd mastered some basic concepts in OO Ruby Programming. I love the elegant way that objects can communicate with each other - it seems so satisfying and organized. For a former writer and Philosophy major, this fit my brain flow perfectly!</p>
+      <p>However, I am still struggling to know when to return the array that's being added to in a method and when that's unecessary. For me, in my mind, the array is what it is and returning it isn't doing anything extra. Sometimes I think this is true. But sometimes if the method calls for something specific to be returned, the array needs to be explicitly returned.</p>
+      <p>In this lab, it doesn't matter. Take the method #back_project:</p>
+      <pre>
+        <code>
+        class Backer
+          attr_accessor :name, :title, :project, :backers, :backed_projects
+
+          def initialize(name)
+            @name = name
+            @backed_projects = []
+          end
+
+          def back_project(project)
+            magic = Project.new(project)
+            @backed_projects << project
+            @backed_projects
+            project.backers << self
+            project.backers
+          end
+
+
+        end
+      </pre>
+    </code>
+    <p> This does the same thing as this code:</p>
+    <pre>
+      <code>
+        class Backer
+          attr_accessor :name, :title, :project, :backers, :backed_projects
+
+          def initialize(name)
+            @name = name
+            @backed_projects = []
+          end
+
+          def back_project(project)
+            @backed_projects << project
+            project.backers << self
+          end
+
+        end
+      </pre>
+    </code>
+    <p>In this case, something just needs to be added to an array, and nothing is returned. It doesn't hurt anything to return the array!</p>
+    </div>
+
     <h3><div class="blocktitle">July 7th, 2018</div></h3>
 
     <div id="blogtitle">Deli Counter Lab - in Ruby vs. JavaScript</div>
