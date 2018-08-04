@@ -61,7 +61,8 @@
         </code>
       </pre>
       <p>In order for this code to work the way it should and reverse the transfer via #reverse_transfer that was executed in #execute_transaction, the if statement must only contain booleans. That means each component of the conditionals in the if statement have to return either "true" or "false". Which part doesn't do that?</p>
-      <p>It's the <code>self.execute_transaction</code> that's the problem.
+      <p>It's the <code>self.execute_transaction</code> that's the problem. That's a method that doesn't return true or false. I had included it in the conditional statement because i thought the transfer had to happen before it's reversed. Turns out, that wasn't necessary, and the whole problem of the last block of my code had to do with the first part of my if statement which wasn't a boolean.</p>
+      <p>Moral of today? Always ask others for help and always remember to check booleans and return values before making an if statement!</p>
     </div>
 
     <h3><div class="blocktitle">August 2nd, 2018</div></h3>
