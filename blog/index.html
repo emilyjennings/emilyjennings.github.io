@@ -14,6 +14,56 @@
       <h1 id="first">Learning Blog</h1>
     </div>
 
+    <h3><div class="blocktitle">August 4th, 2018</div></h3>
+
+    <div id="blogtitle">If statements and booleans in Ruby</div>
+
+    <div class="aboutemilyblock">
+      <p>I just finished the lab called <a href="https://learn.co/tracks/full-stack-web-development-v4/object-oriented-ruby/object-relationships/oo-banking">"OO Banking"</a> on the Learn platform and I had to wrap my head around booleans as the only thing that can be named in conditions of an if statement in order to solve this lab. Consider this code:</p>
+      <pre>
+        <code>
+          class Transfer
+            attr_accessor :status, :bankaccount
+            attr_reader :amount, :sender, :receiver
+
+            def initialize(sender, receiver, amount)
+              @sender = sender
+              @receiver = receiver
+              @status = "pending"
+              @amount = amount
+            end
+
+            def valid?
+              sender.valid? && receiver.valid?
+            end
+
+            def execute_transaction
+              if sender.balance < amount
+                @status = "rejected"
+                return "Transaction rejected. Please check your account balance."
+              elsif @status != "complete" && sender.valid?
+                @receiver.balance = @receiver.balance + amount
+                @sender.balance = @sender.balance - amount
+                @status = "complete"
+              end
+            end
+
+            def reverse_transfer
+              if self.execute_transaction && valid? && @receiver.balance > amount && status == "complete"
+                #binding.pry
+                @receiver.balance = @receiver.balance - amount
+                @sender.balance = @sender.balance + amount
+                @status = "reversed"
+              end
+            end
+
+          end
+        </code>
+      </pre>
+      <p>In order for this code to work the way it should and reverse the transfer via #reverse_transfer that was executed in #execute_transaction, the if statement must only contain booleans. That means each component of the conditionals in the if statement have to return either "true" or "false". Which part doesn't do that?</p>
+      <p>It's the <code>self.execute_transaction</code> that's the problem.
+    </div>
+
     <h3><div class="blocktitle">August 2nd, 2018</div></h3>
 
     <div id="blogtitle">OO Kickstarter Lab: returning arrays</div>
