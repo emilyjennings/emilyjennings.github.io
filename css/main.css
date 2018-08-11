@@ -286,11 +286,12 @@ a:hover {
   background: #C4EFDA;
   font-size: 18px;
   padding: 20px;
-  letter-spacing: .5px;
+  letter-spacing: .4px;
   color: #747E7A;
   text-indent: 30px;
   line-height: 30px;
   font-family: monospace;
+  overflow: scroll;
 }
 
 .question {
