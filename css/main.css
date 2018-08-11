@@ -754,7 +754,7 @@ p.project {
     background-color: #23C6B3;
     opacity: 0.9;
     border-radius: 5px 5px 5px 5px;
-    margin: 30px 80px 30px 80px;
+    margin: auto;
     padding: 20px;
     font-size: 30px;
     color: #3B4548;
@@ -853,7 +853,7 @@ p.project {
     font-family: Georgia, serif;
     font-size: 20px;
     color: #C4EFDA;
-    margin: 10px;
+    margin: 40px 10px 10px 10px;
   }
 
   .aboutemilyblock2 {
@@ -865,14 +865,19 @@ p.project {
     border: 10px solid #23C6B3;
     border-radius: 20px;
     background: #C4EFDA;
-    font-size: 10px;
-    padding: 20px;
-    letter-spacing: .5px;
+    font-size: 14px;
+    padding: 10px;
+    letter-spacing: .3px;
     color: #747E7A;
     text-indent: 30px;
-    line-height: 30px;
+    line-height: 20px;
     font-family: monospace;
+    overflow: scroll;
   }
+
+
+
+
 
 
 
