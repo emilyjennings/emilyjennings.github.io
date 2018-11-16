@@ -14,6 +14,82 @@
       <h1 id="first">Dev Learning Blog</h1>
     </div>
 
+    <h3><div class="blocktitle2">November 16, 2018</div></h3>
+
+    <div id="blogtitle">What’s so fun about pair programming but what’s so hard</div>
+
+    <div class="aboutemilyblock2">
+      <p>I have been programming with other learners who are located in other cities for about a month now and it’s been so fun. Nothing feels as great as bringing together your experiences and widening your horizons through talk about code. You think you’re all alone struggling and triumphing but then you realize there’s a whole world out there of independent coders who are going through the same.
+
+      <p>I've been making <a href="https://github.com/BillyPittman1993/musical-fortnight">a little side project with Billy Pittman</a>, who is a tad behind me in the <a href="Learn.co">Learn.co Flatiron School</a> curriculum, and I created <a href="https://github.com/BekahHW/sinatra-fwitter-group-project-v-000">a Twitter clone as part of the Flatiron School Online Bootcamp</a> with someone named Bekah a couple weeks ago. She has kids too, and an unpredictable
+      schedule as well. We loved working together because we totally understood each other! It took us just under a week to complete the lab and meet the requirements collectively. We started out talking for an hour over video communication and then dove into our parts. We thought we’d be able to divide up the project and work simultaneously on different parts, coming together to merge them later, but quickly found that our parts depended on each other, so we decided to do it “pass” style (we passed it back and forth and never working on it at the same time). I wanted to document some of that for anyone out there who may be struggling with the same things we faced when starting out, especially with regards to git and GitHub collaboration.
+
+      <p>First of all, if you’re working remotely with a small team like that on a project and doing it “pass” style, I recommend messaging the person before starting to work on your part of it and after being done. The other person would also always check the messages before starting and finishing. This eliminates any risk of incompatible versions that will ultimately take up more time than it’s worth to sort through.
+
+      <p>I then recommend <i>always always always</i> remembering to work on a separate branch of your own and leaving the master alone until you know what you’ve worked on is working and ready to push. This is hard to remember as a beginner, but you have to get in the habit. This is how you make a new branch:
+
+      <pre class=“code” style>
+        <code>
+          git checkout -b [name of your new branch]
+        </code>
+      </pre>
+
+      <p>So, when you want to switch back to the master branch and merge, first add changes:
+
+      <pre class=“code” style>
+        <code>
+          git add .
+        </code>
+      </pre>
+
+      <p>Then commit:
+
+      <pre class=“code” style>
+        <code>
+          git commit “[say what changes you’re making]”
+        </code>
+      </pre>
+
+      <p>Then, I always push:
+
+      <pre class=“code” style>
+        <code>
+          git push
+        </code>
+      </pre>
+
+      <p>And finally, you’re ready to switch back to the master and push the changes up to the main project you’re both working on:
+
+      <pre class=“code” style>
+        <code>
+          git checkout master
+        </code>
+      </pre>
+
+      <p>And you’ll need to merge first:
+
+      <pre class=“code” style>
+        <code>
+          git merge [name of your new branch you’d been working on]
+        </code>
+      </pre>
+
+      <p>And, crossing fingers there were no conflicts to be resolved between the changes and the master code, you push again!
+
+      <p>To then get the changes later that your partner pushed, you will want to be on the master branch and pull:
+
+      <pre class=“code” style>
+        <code>
+          git pull [the GitHub repo name you copy to the clipboard]
+        </code>
+      </pre>
+
+      <p>And before working, again always switch to your other branch (I find myself making a whole new one every time just to be sure and to avoid confusion for myself).
+
+      <p>I hope this helps someone!
+    </div>
+
+
     <h3><div class="blocktitle2">November 5, 2018</div></h3>
 
     <div id="blogtitle">Are Computers Intelligent? Still a Geeky Philosopher at Heart.</div>
