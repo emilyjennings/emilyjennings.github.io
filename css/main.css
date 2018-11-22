@@ -48,6 +48,10 @@ body {
   z-index: 100;
 }
 
+.nav a {
+  display: block;
+}
+
 .background-image {
   position: relative;
   overflow: hidden;
