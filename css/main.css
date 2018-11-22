@@ -275,6 +275,10 @@ a:hover {
   font-family: monospace;
 }
 
+.aboutemilyblock a:hover {
+  color: #3B4548;
+}
+
 .aboutemilyblock2 {
   display: block;
   margin-left: 40px;
@@ -547,12 +551,25 @@ p.col2  i.fa {
 
 .projects img {
   display: block;
-  width: 60%;
+  width: 50%;
   margin: auto;
+  border: 5px solid #23C6B3;
+  border-radius: 5px;
+}
+
+.projects iframe {
+  display: block;
+  width: 50%;
+  margin: auto;
+  border: 5px solid #23C6B3;
+  border-radius: 5px;
 }
 
 p.project {
   text-indent: 25px;
+  margin: 30px;
+  margin-bottom: 50px;
+  margin-top: 30px;
 }
 
 .projects img:hover {
