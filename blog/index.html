@@ -16,21 +16,71 @@
 
     <h3><div class="blocktitle2">November 22, 2018</div></h3>
 
-    <div id="blogtitle">Sinatra Project: Philosophy Thought Experiments</div>
+    <div id="blogtitle">My Sinatra Project & How I Authenticated My Users</div>
 
     <div class="aboutemilyblock2">
-      <p>In 2005, I wrote a dissertation for my honours degree in philosophy at Otago about artificial intelligence (a sexy notion at the time, when AI wasn’t something humanity had seen in real life yet). In it, I argued that the criteria for personhood included the ability to adapt to an environment to the point that tools could be created/used to solve a novel problem. This was what I defined as intelligence, and the criteria for a computer having the possibility of becoming a ‘person’. No simple thesis, as it turned out.
-      </p>
-      I wouldn’t have believed anyone if they’d ever told me that I would be programming computers thirteen years later.
-      </p>
-      What would I conclude now that I’ve been learning programming? I now have the foundations of knowledge on how computers really work. And what I’ve learned is: computers are stupid. (Also, I’ve heard it said numerous times at beginner coding workshops.) What does ‘stupid’ mean? I can tell you. It means they’re inanimate objects with human operators. They need ‘persons’ to give them any semblance of free agency and intelligence, and any feeling you may have that they are a ‘person’ is an elaborate illusion. As the Turing test proves, your feeling that something is an intelligent person carries the story very far. If a computer passes the Turing test, that just means that a human operator passed the Turing test.
-      </p>
-      <p>So, computers are stupid. So far.
-      </p>
-      <p>Could they be persons someday? Could they meet my criteria for intelligence? I think that was my ultimate question then and still is the question we’re all wondering now. Our brains are just a neural network - this could potentially be reproduced in an artificial creation, right?
-      </p>
-      <p>I’m still holding onto hope.
-      </p>
+      <p>I created a sinatra project! It's still unbelievable to me how much I've learned.I decided to bring in my past experience in philosophy to make a useful application that allows users to log in and create/share thought experiments, organizing them into branches of philosophy. I had so much fun doing it. <a href="https://www.youtube.com/watch?v=J346y5s9hLk">Click here to see a video demo!</a> Also, <a href="https://github.com/emilyjennings/Philosophy-Thought-Experiments-Sinatra-Project">check out the code here.</a></p>
+      <p>I found that the hardest part was mastering the user login authentication and controlling the contributions of each user as their own, so that no one but the user can modify or delete a post. So, I want to give some helpful tips here for how to get started with user authentication.</p>
+      <p>For starters, you'll need to make helper methods that will determine whether a user is logged in and the session id of the current user. You'll need these methods in order to write the code in your controllers that route the user to the proper pages, for instance if they try to make a post but you want them to instead log in first.</p>
+      <p>Here are the helper methods I used, and I credit their existence to my partner, Bekah, from the Fwitter group project I'd done previously. I found that the code worked great and I encourage you to also use it: </p>
+      helpers do
+      <pre class=“code” style>
+        <code>
+          helpers do
+            def logged_in?
+              !!session[:user_id]
+            end
+
+            def current_user
+              User.find(session[:user_id])
+            end
+          end
+        </code>
+      </pre>
+      <p>I put these two methods in my application controller.</p>
+      <p>Later, when I was writing the patch request in the experiments controller, for example, I would use the #current_user method to decide whether the user could actually edit that contribution (if they were logged in as the user who created it) or whether it would redirect them back to the index page.</p>
+      <pre class=“code” style>
+        <code>
+          patch "/experiments/:id" do
+          @story = Experiment.find_by(id: params[:id])
+          if current_user.id == @story.user_id
+            @story.title = params[:title]
+            @story.story = params[:story]
+            @story.branch_id = params[:branch_id]
+            @story.save
+          else
+            flash[:message] = "That's not your story to edit"
+            redirect :"/experiments"
+          end
+            flash[:message] = "Updated"
+            redirect "/experiments/#{@story.id}"
+        end
+        </code>
+      </pre>
+      <p>As you can see, I made a conditional statement that stopped the program from allowing the user to make the edit unless the post's id was the same as the current user's (session) id. I like to think of it as the gatekeeper to which actions are possible to the user, behind the scenes. If they don't meet those requirements, it routes them back to the index page that shows all the experiments.</p>
+      <p>I used the #logged_in helper method, for instance, when I was showing the user a page to welcome them after they've logged in. Obviously I didn't want the user to see that unless they're logged in, and they shouldn't make it that far unless the log in was successful.</p>
+      <pre class=“code” style>
+        <code>
+          # welcome page after logging in
+          get "/users" do
+            if logged_in?
+              @all_users = User.all
+              @user = current_user
+              erb :"/users/index.html"
+            else
+              redirect "/start"
+            end
+          end
+        </code>
+      </pre>
+      <p>The consitional statement here first determines if the user logged in, and then it assignes the instance varibale @user the value of the current user. that's how in the view page I can welcome that exact user by name. I do this in the views/users/index.html.erb view.</p>
+      <pre class=“code” style>
+        <code>
+          <h1>Welcome, <%=@user.username.capitalize%>, to the wonderful world of Philosophy Thought Experiments to help you live your life!</h1>
+        </code>
+      </pre>
+      <p>I hope this helps someone out there hoping to authenticate their users in Sinatra for the first time.</p>
+
     </div>
 
 
