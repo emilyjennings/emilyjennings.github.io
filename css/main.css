@@ -783,6 +783,22 @@ p.project {
     font-weight: bold;
   }
 
+  .projects img {
+    display: block;
+    width: 70%;
+    margin: auto;
+    border: 5px solid #23C6B3;
+    border-radius: 5px;
+  }
+
+  .projects iframe {
+    display: block;
+    width: 70%;
+    margin: auto;
+    border: 5px solid #23C6B3;
+    border-radius: 5px;
+  }
+
 
 }
 
@@ -895,6 +911,22 @@ p.project {
     line-height: 20px;
     font-family: monospace;
     overflow: scroll;
+  }
+
+  .projects img {
+    display: block;
+    width: 80%;
+    margin: auto;
+    border: 5px solid #23C6B3;
+    border-radius: 5px;
+  }
+
+  .projects iframe {
+    display: block;
+    width: 80%;
+    margin: auto;
+    border: 5px solid #23C6B3;
+    border-radius: 5px;
   }
 
 
