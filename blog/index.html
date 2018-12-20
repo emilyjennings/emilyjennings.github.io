@@ -33,11 +33,11 @@
     <div id="blogtitle">My Sinatra Project & How I Authenticated My Users</div>
 
     <div class="aboutemilyblock2">
-      <p>I created a sinatra project! It's still unbelievable to me how much I've learned.I decided to bring in my past experience in philosophy to make a useful application that allows users to log in and create/share thought experiments, organizing them into branches of philosophy. I had so much fun doing it. <a href="https://www.youtube.com/watch?v=J346y5s9hLk">Click here to see a video demo!</a> Also, <a href="https://github.com/emilyjennings/Philosophy-Thought-Experiments-Sinatra-Project">check out the code here.</a></p>
+      <p>I created a sinatra project! It's still unbelievable to me how much I've learned. I decided to bring in my past experience in philosophy to make a useful application that allows users to log in and create/share thought experiments, organizing them into branches of philosophy. I had so much fun doing it. <a href="https://www.youtube.com/watch?v=J346y5s9hLk">Click here to see a video demo!</a> Also, <a href="https://github.com/emilyjennings/Philosophy-Thought-Experiments-Sinatra-Project">check out the code here.</a></p>
       <p>I found that the hardest part was mastering the user login authentication and controlling the contributions of each user as their own, so that no one but the user can modify or delete a post. So, I want to give some helpful tips here for how to get started with user authentication.</p>
       <p>For starters, you'll need to make helper methods that will determine whether a user is logged in and the session id of the current user. You'll need these methods in order to write the code in your controllers that route the user to the proper pages, for instance if they try to make a post but you want them to instead log in first.</p>
       <p>Here are the helper methods I used, and I credit their existence to my partner, Bekah, from the Fwitter group project I'd done previously. I found that the code worked great and I encourage you to also use it: </p>
-      helpers do
+      <br>
       <pre class=“code” style>
         <code>
           helpers do
