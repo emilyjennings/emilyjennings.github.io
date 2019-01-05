@@ -580,7 +580,13 @@ p.project {
   opacity: 0.5;
 }
 
-
+pre {
+  background-color: #23C6B3;
+  color: #E3F3F3;
+  display: block;
+  margin: 20px auto;
+  border-radius: 5px;
+}
 
 
 

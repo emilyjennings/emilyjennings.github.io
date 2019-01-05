@@ -14,6 +14,43 @@
       <h1 id="first">Dev Learning Blog</h1>
     </div>
 
+
+    <h3><div class="blocktitle2">January 4, 2019</div></h3>
+
+    <div id="blogtitle">My Rails Project, Register Your Kid!</div>
+
+    <div class="aboutemilyblock2">
+      <p>I recently ‘finished’ a Rails project named <a href=“https://github.com/emilyjennings/register-your-kid”>Register Your Kid</a>, although I doubt it will ever be finished. I wanted to make it as an app for a local arts center in my neighborhood who has trouble because they only conduct registration on paper as of now. I wanted to make it more accessible and digital.
+
+      <p>The hardest part of creating this project was the nested forms. I want to walk you through a bit of how I managed to create these. The key seemed to be in the url path that the form_for directed the params to, since the data had to go to the kids controller in this form you see in views/parents/show.html.erb:
+      <pre class=“code” style>
+        <code>
+          <% if exists?(k) %>
+            <%=form_for k, url: parent_kid_path(@parent, k), method: :patch do |f|%>
+              <%= f.collection_select :course_id, Course.all, :id, :title%>
+              <%= f.submit "Submit" %>
+            <%end%>
+          <%end%>
+        </code>
+      </pre>
+      <p> The course that the kid is being registered for here needed to be associated with the kid object, which I reference with “k”. The kid is already associated with the parent whose show page this is appears on, because of the nested route parent_kid_path. I just needed to make sure that the course was associated with that particular kid. In the Kids controller, I allowed the POST request from this form to move the data as params to the update method:
+        <pre class="code" style>
+          <code>
+            def update
+              @kid = Kid.find(params[:id])
+              @kid.update(course_id: params[:kid][:course_id])
+              redirect_to parent_path(session[:id])
+            end
+          </code>
+        </pre>
+      <p>The kid is located in the database and then updated with the new course information when it’s given a course id.
+
+      <p>This project was so fun and I learned a ton! I hope to add front end features soon using JavaScript.
+
+    </div>
+
+
+
     <h3><div class="blocktitle2">December 14, 2018</div></h3>
 
     <div id="blogtitle">I plan projects on the go in my head</div>
