@@ -805,6 +805,13 @@ pre {
     border-radius: 5px;
   }
 
+  pre {
+    font-size: 15px;
+    overflow: scroll;
+
+  }
+
+
 
 }
 
