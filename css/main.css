@@ -472,6 +472,19 @@ i.fa-lightbulb-o {
   background-image: url('../img/Bali13.jpg');
 }
 
+.twainblock {
+  border-radius: 5px 5px 5px 5px;
+  margin: 70px;
+  border: 5px solid #35CDD1;
+  padding: 25px 20px 15px 20px;
+  clear: both;
+  text-align: center;
+  background-color: #C4EFDA;
+  color: #747E7A;
+  font-family: monospace;
+  font-size: 20px;
+}
+
 .container2 {
   display: inline-block;
   margin: 30px;
