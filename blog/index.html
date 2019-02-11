@@ -15,6 +15,29 @@
     </div>
 
 
+    <h3><div class="blocktitle2">February 8, 2019</div></h3>
+
+    <div id="blogtitle">The MD5 hash generator and the Marvel API</div>
+
+    <div class="aboutemilyblock2">
+      <p>A couple of weeks ago, I made a Rails project using the <a href="https://developer.marvel.com/">Marvel Developer API</a>, which is a very well-maintained way to access tons of information about Marvel comic book and movie characters. <a href="https://github.com/emilyjennings/text-marvel-combat-arena">My project</a> used Faraday, a gem for calling APIs in Rails, and it required an API public and private key to access the database.
+
+      <p>I was really stuck at one point on the way the API wanted me to send the parameters. They explain <a href="https://developer.marvel.com/documentation/authorization">in their documentation</a> that a hash of the timestamp, public key, and private key needs to be passed as parameters when calling the API, but I struggled to find out how to generate such a hash. (Note: the documentation will also say the hash is only needed for server-side applications, but I found this not to be true.)
+
+      <p>The documentation mentions an example of a hash generator, ‘md5(ts+privateKey+publicKey)’, so I searched 'MD5 for Rails', and I found <a href="https://ruby-doc.org/stdlib-2.4.0/libdoc/digest/rdoc/Digest/MD5.html">this resource</a> describing how to use it. This MD5 class comes with the standard rails library, and I used hexidigest, which worked fine.
+
+      <p>To use it, enter the string you want to create as an argument, for instance with the Marvel API you’ll need to pass a specific string like so (after you've set the necessary strings as variables):
+
+      <pre class=“code” style>
+        <code>
+          hash = Digest::MD5.hexdigest( "#{timestamp}#{private_key}#{public_key}" )
+        </code>
+      </pre>
+
+      <p>And you’ve got a hash encrypted in a way that you can use for the Marvel API or other authentication situations!
+    </div>
+
+
     <h3><div class="blocktitle2">January 4, 2019</div></h3>
 
     <div id="blogtitle">My Rails Project, Register Your Kid!</div>
