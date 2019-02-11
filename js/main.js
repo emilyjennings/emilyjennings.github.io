@@ -162,24 +162,29 @@ var fadeIn = setInterval(function(){
   }, 1000);
 
 
-  // $(window).on("load",function() {
-  //   // if (window.screen.width >= 800 && window.screen.height >= 768) {
-  //     $(window).scroll(function() {
-  //       var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-  //       $(".floatblock, .twainblock, .Thankblock").each(function() {
-  //         /* Check the location of each desired element */
-  //         var objectBottom = $(this).offset().top + $(this).outerHeight();
-  //
-  //         /* If the element is completely within bounds of the window, fade it in */
-  //         if (objectBottom - 100 < windowBottom) { //object comes into view (scrolling down)
-  //           if ($(this).css("opacity")==0) {$(this).fadeTo(700,1);}
-  //         } else { //object goes out of view (scrolling up)
-  //           if ($(this).css("opacity")==1) {$(this).css("opacity")==1);}
-  //         }
-  //       });
-  //     }).scroll(); //invoke scroll-handler on page-load
-  //
-  // });
+  $(window).on("load",function() {
+    $(window).scroll(function() {
+      var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+      $(".floatblock, .twainblock, .Thankblock").each(function() {
+        /* Check the location of each desired element */
+        var objectBottom = $(this).offset().top + $(this).outerHeight();
+
+        if ($(window).innerWidth() < 600) {
+          if (objectBottom < windowBottom + 350) { //object comes into view (scrolling down)
+            if ($(this).css("opacity")==0) {$(this).fadeTo(700,1);}
+          } else { //object goes out of view (scrolling up)
+            if ($(this).css("opacity")==1) {$(this).fadeTo(700,0);}
+          }
+        }else{
+          if (objectBottom - 100 < windowBottom) { //object comes into view (scrolling down)
+            if ($(this).css("opacity")==0) {$(this).fadeTo(800,1);}
+          } else { //object goes out of view (scrolling up)
+            if ($(this).css("opacity")==1) {$(this).fadeTo(800,0);}
+          }
+        }
+      });
+    }).scroll(); //invoke scroll-handler on page-load
+  });
 
 /*
 
