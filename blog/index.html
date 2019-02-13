@@ -15,6 +15,222 @@
     </div>
 
 
+    <h3><div class="blocktitle2">February 13, 2019</div></h3>
+
+    <div id="blogtitle">Making a Rails App from Scratch</div>
+
+    <div class="aboutemilyblock2">
+      <p>I have been trying to become a master at making a rails app from scratch, so I wanted to write about my journey in doing it. I will be making a rails app to handle this very blog you are reading right now. If all goes well, it will be deployed on Heroku and I will be able to update it as the only user, but potentially others could use the same code or create a community blog.</p>
+
+      <p>So, as an initial measure, you should make sure that your computer has Rails, Ruby, and other basic development frameworks installed. Hopefully you haven’t made it to my blog before doing this, but if you have, you should go to the download pages of these things and get those on your machine.</p>
+
+      <p>You should decide before starting a project which Ruby version you want to use. Maybe you know that some things you want to do are easier in earlier or later versions. You can use the <a href=“https://www.phusionpassenger.com/library/walkthroughs/deploy/ruby/ownserver/standalone/oss/install_language_runtime.html>rvm gem</a> to set the version you are going to use. Then type ‘rvm use (the version)’ into the command line. For instance, for my blog project I am typing:</p>
+
+      <pre class=“code” style>
+        <code>
+          $ rvm use 2.5.3
+        </code>
+      </pre>
+
+      <p>Now let’s make a new project!</p>
+
+      <p>Note: if you want to deploy later to Heroku, read this article over and follow the instructions. (https://medium.com/@kasiarosenb/deploying-your-rails-app-on-heroku-a2096dc40aac) You’ll need to use Postgres as the database, not sqlite3 which comes with rails automatically. I am going to give the most basic instructions on making an app here without worrying about that.</p>
+
+      <p>In the terminal, type ‘rails new (app name)’ like so:</p>
+
+      <pre class=“code” style>
+        <code>
+          $ rails new emilyblog
+        </code>
+      </pre>
+
+      <p>You’ll need to cd into your new project directory, create a repo on GitHub, initialize git, commit, and push to the new repo. I know you can do this!</p>
+
+      <p>You’ll need to run bundler:</p>
+
+      <pre class=“code” style>
+        <code>
+          $bundle install
+        </code>
+      </pre>
+
+      <p>And open the project in a text editor! I like to use atom.</p>
+
+      <p>Now’s the fun part. You get to decide what you want to build and what structure it will have. I personally like to start with the user experience, and imagine what the user sees when first encountering this app. For this project, the user could be anyone, but I’ll be using it for my own blogging purposes. So, I want to make sure no one else can post on my blog. So, I’ll need authentication. I want to use the devise gem for that, and I’ll need a login form, which comes with devise.</p>
+
+      <p>I’ll then need some kind of dashboard for the user to see how to post a new blog post and to view the posts already made. The reader of this blog should be able to see an index of all posts and browse through them. So, I’ll need a user model and a posts model. </p>
+
+      <p>I have to think hard before starting: do I want to add complexity by having more models? Maybe I want to categorize my posts too. Posts will be able to have many categories, and categories have many posts. Oh, boy! I need a join table called post categories to handle this many-to-many relationship! I won’t go into creating this kind of thing here, but how to do that is explained nicely in <a href=“https://stackoverflow.com/questions/5120703/creating-a-many-to-many-relationship-in-rails”>this article on Stack Overflow.</a></p>
+
+      <p>I’ll just make a model for posts and for users, keep it simple for this project. But the important thing is that you PLAN IT OUT before going further.</p>
+
+      <p>I want to use the devise gem for authentication, so <a href=“https://guides.railsgirls.com/devise”>I followed these instructions</a> to install the gem and use it, and it also will create a user model and migration for users. Then, I want to create the post migration, controller, and views, so I enter this command in the terminal:</p>
+
+      <pre class=“code” style>
+        <code>
+          $ rails g scaffold Post title:string created:string content:string
+        </code>
+      </pre>
+
+
+      <p>Don’t worry if you forget to add a column for one of these tables. You can easily add those later. The hard thing to add later is the overall relationships between the models. That’s why planning ahead is crucial.</p>
+
+      <p>Now we’re ready to migrate! But since we’re using Postgres as our database, we need to create the database first. Run:</p>
+
+      <pre class=“code” style>
+        <code>
+          $ rails db:create
+        </code>
+      </pre>
+
+      <p>Then migrate! Run:</p>
+
+      <pre class=“code” style>
+        <code>
+          $ rake db:migrate
+        </code>
+      </pre>
+
+      <p>We now need to make sure the models are related to each other properly. Posts belong to users, and users have many posts. So, in the user.rb file, make sure it looks like this:</p>
+
+      <pre class=“code” style>
+        <code>
+          class User < ApplicationRecord
+          	has_many :posts
+           	devise :database_authenticatable, :registerable,
+                   :recoverable, :rememberable, :validatable
+          end
+        </code>
+      </pre>
+
+      <p>And the post.rb file looks like this:</p>
+
+      <pre class=“code” style>
+        <code>
+          class Post < ApplicationRecord
+          	belongs_to :user
+          end
+        </code>
+      </pre>
+
+      <p>Let’s go into the console and see if we did what we came to do. Run:</p>
+
+      <pre class=“code” style>
+        <code>
+          $ rails console
+        </code>
+      </pre>
+
+      <p>And let’s see what’s working.</p>
+
+      <pre class=“code” style>
+        <code>
+          $ post = Post.new(title: "test")
+        </code>
+      </pre>
+
+      <p>Tells me that there’s a new post now!</p>
+
+      <p>Great! Can we give it a user? Let’s create one:</p>
+
+      <pre class=“code” style>
+        <code>
+          $ user = User.new(email: "emily@emily.com", password: "emily")
+         </code>
+       </pre>
+
+      <p>And I needed to have included a user_id in the Post table if I want posts to be associated with users, so I need to create a new migration now:</p>
+
+      <pre class=“code” style>
+        <code>
+          $ rails g migration add_userid_to_posts user_id:integer
+        </code>
+      </pre>
+
+      <p>And rake db:migrate again! Go into the rails console again and create the test user and test post again, and then try:</p>
+
+      <pre class=“code” style>
+        <code>
+          $ post.user_id = 1
+        </code>
+      </pre>
+
+      <p>That should associate the post with the user! Great, the database looks good to go.</p>
+
+      <p>So, let’s start up the rails server and see what we have! We will need a root path in our routes.rb file (found in the config directory), so when we fire up the server it knows where to go first. Add this to that file:</p>
+
+      <pre class=“code” style>
+        <code>
+          $ root “posts#index”
+        </code>
+      </pre>
+
+      <p>And run:</p>
+
+      <pre class=“code” style>
+        <code>
+          $ rails s
+        </code>
+      </pre>
+
+      <p>If you followed all the instructions in the Rails Girls post about devise above, you should see a login form. </p>
+
+      <p>Congratulations! I think that is actually the hardest part of making an app for the first time. The set up was so hard for me the first time I did it!</p>
+
+      <p>Now, let’s make sure posts are showing up on the page and there’s a way to submit a new post. Let’s go to the controller, in the app folder find the posts_controller.rb file. Our viewer will always land on the index page first since we set that as the root path, so let’s make sure that the root action method is set up. It should look like this:</p>
+
+      <pre class=“code” style>
+        <code>
+          def index
+            @posts = Post.all
+          end
+        </code>
+      </pre>
+
+      <p>It’s already set up! This means that when the index view file has @posts in it, it will reference all the posts that are in the database. We don’t have any yet, so let’s make one. We will need to go to the new.html.erb file in the views/posts folder, and just have a look before you go at the new action in the controller:</p>
+
+      <pre class=“code” style>
+        <code>
+          def new
+            @post = Post.new
+          end
+        </code>
+      </pre>
+
+      <p>This means that the view will render and instantiate an empty object, the post. Let’s go see. Go to http://localhost:3000/posts/new and also look at the new.html.erb file. Wow! This is already set up for us via a partial layout. If you look at the file _form.html.erb, you’ll see the form. I am going to tweak it so that the content comes in on a test area - that will make it easier to see my post as I type it.</p>
+
+      <pre class=“code” style>
+        <code>
+            <%= form.label :content %>
+            <%= form.text_area :content %>
+        </code>
+      </pre>
+
+      <p>Refresh, and make a post! When you git submit there will be an error saying the user doesn’t exist. That’s because we didn’t create a way for the post to be associated with a user. The create action in the controller should look like this:</p>
+
+      <pre class=“code” style>
+        <code>
+          def create
+              @post = Post.new(post_params)
+              @post.user_id = current_user.id
+
+              respond_to do |format|
+                if @post.save
+                  format.html { redirect_to @post, notice: 'Post was successfully created.' }
+                  format.json { render :show, status: :created, location: @post }
+                else
+                  format.html { render :new }
+                  format.json { render json: @post.errors, status: :unprocessable_entity }
+                end
+              end
+            end
+          </code>
+        </pre>
+
+      <p>Now, try submitting your post again! It works! You are amazing. You have a blog now!</p>    </div>
+    </div>
+
+
     <h3><div class="blocktitle2">February 8, 2019</div></h3>
 
     <div id="blogtitle">The MD5 hash generator and the Marvel API</div>
