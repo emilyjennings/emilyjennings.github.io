@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <title>Map Time!</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script src="../js/main.js" charset="utf-8"></script>
+
+
+  </head>
+  <body>
+
+    <div id='map'></div>
+    <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoiamVuZW01ODMiLCJhIjoiY2pzMGxwOHJyMWwzeDQzcGlta2c1ODJ2YSJ9.x4VK6JYLigcauO3Vw9eDAw';
+      const map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/jenem583/cjs0lsxnn02hs1fqhjnrvxlsd',
+      bearing: -0.01,
+      center: [-76.943500, 38.949982],
+      zoom: 11.28,
+      speed: 0.8,
+      pitch: 0
+      });
+      var nav = new mapboxgl.NavigationControl();
+        map.addControl(nav, 'bottom-right');
+    </script>
+
+  </body>
+</html>
