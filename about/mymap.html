@@ -18,20 +18,22 @@
   </head>
   <body>
 
+    <h1 id="mappage">Where's Emily been? Click here to start!</h1>
+
     <div id='map'></div>
     <script>
       mapboxgl.accessToken = 'pk.eyJ1IjoiamVuZW01ODMiLCJhIjoiY2pzMGxwOHJyMWwzeDQzcGlta2c1ODJ2YSJ9.x4VK6JYLigcauO3Vw9eDAw';
       const map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/jenem583/cjs0lsxnn02hs1fqhjnrvxlsd',
-      bearing: -0.01,
-      center: [-76.943500, 38.949982],
-      zoom: 11.28,
-      speed: 0.8,
-      pitch: 0
+        container: 'map',
+        style: 'mapbox://styles/jenem583/cjs0lsxnn02hs1fqhjnrvxlsd',
+        bearing: -0.01,
+        center: [-85.113192, 39.385946],
+        zoom: 1.3,
+        speed: 0.8,
+        pitch: 0
       });
       var nav = new mapboxgl.NavigationControl();
-        map.addControl(nav, 'bottom-right');
+        map.addControl(nav, 'bottom-right'); 
     </script>
 
   </body>

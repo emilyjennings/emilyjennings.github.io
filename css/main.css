@@ -604,7 +604,7 @@ pre {
 
 #map {
   display: block;
-  position: absolute;
+  position: relative;
   top:0;
   bottom:0;
   width: 50%;
@@ -612,7 +612,21 @@ pre {
   margin-left: 25%;
   margin-right: 25%;
   margin-top: 30px;
+  border: 10px solid #23C6B3;
+  border-radius: 20px;
+}
 
+h1#mappage {
+  display: block;
+  text-align: center;
+  background-color: #23C6B3;
+  opacity: 0.9;
+  border-radius: 5px 5px 5px 5px;
+  margin: 20px 100px 40px 100px;
+  padding: 50px;
+  font-size: 40px;
+  color: #3B4548;
+  font-weight: bold;
 }
 
 

@@ -186,6 +186,43 @@ var fadeIn = setInterval(function(){
     }).scroll(); //invoke scroll-handler on page-load
   });
 
+
+// mapbox functionality
+
+
+  const locationList = {
+    'College Park': {
+        story: "It all started in College Park, Maryland"
+      //   const map = new mapboxgl.Map({
+      //   container: 'map',
+      //   style: 'mapbox://styles/jenem583/cjs0lsxnn02hs1fqhjnrvxlsd',
+      //   bearing: -0.01,
+      //   center: [-76.943500, 38.949982],
+      //   zoom: 11.28,
+      //   speed: 0.8,
+      //   pitch: 0
+      // });
+    },
+    'Dunedin': {
+      story: "I decided to travel after high school. I wanted to go to college too, though. So I just did both at the same time and ended up in Dunedin, New Zealand, a country I didn't know existed till about a year before I went."
+    }
+  }
+
+
+  $('#mappage').click(function(event){
+      $('#mappage').text(locationList.Dunedin.story)
+
+        const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/jenem583/cjs0lsxnn02hs1fqhjnrvxlsd',
+        bearing: -0.01,
+        center: [-76.943500, 38.949982],
+        zoom: 11.28,
+        speed: 0.8,
+        pitch: 0
+      });
+  });
+
 /*
 
   var displayGallery = function(whichGallery){
