@@ -602,7 +602,18 @@ pre {
   overflow: scroll;
 }
 
+#map {
+  display: block;
+  position: absolute;
+  top:0;
+  bottom:0;
+  width: 50%;
+  height: 400px;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 30px;
 
+}
 
 
 
