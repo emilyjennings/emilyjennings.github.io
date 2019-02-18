@@ -877,6 +877,31 @@ pre {
 
   }
 
+  #map {
+    width: 70%;
+    height: 400px;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+  #mappage {
+    margin: 20px 50px 40px 50px;
+    padding: 30px;
+    font-size: 30px;
+  }
+
+  #storycontent {
+    margin: 20px 30px 40px 30px;
+    padding: 15px;
+    font-size: 18px;
+  }
+
+  #note {
+    margin: 20px 20px 40px 20px;
+    padding: 8px;
+    font-size: 12px;
+  }
+
 
 
 }
@@ -1009,7 +1034,30 @@ pre {
   }
 
 
+  #map {
+    width: 80%;
+    height: 400px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
 
+  #mappage {
+    margin: 20px 20px 30px 20px;
+    padding: 30px;
+    font-size: 30px;
+  }
+
+  #storycontent {
+    margin: 20px 10px 30px 10px;
+    padding: 15px;
+    font-size: 18px;
+  }
+
+  #note {
+    margin: 20px 15px 40px 15px;
+    padding: 8px;
+    font-size: 12px;
+  }
 
 
 
