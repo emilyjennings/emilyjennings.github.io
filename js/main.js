@@ -192,25 +192,25 @@ var fadeIn = setInterval(function(){
 //list of places
   const locationList = {
     'CollegePark': {
-        'story': "It all started in College Park, Maryland",
-        bearing: -0.01,
-        center: [-76.931253, 38.976956],
-        zoom: 13.51,
-        speed: 0.8,
-        pitch: 0
+      'story': "It all started in College Park, Maryland",
+      bearing: -0.01,
+      center: [-76.931253, 38.976956],
+      zoom: 13.51,
+      speed: 0.8,
+      pitch: 0
     },
     'Pretoria': {
-        'story': "In high school, I lived for a year with a host family in South Africa - Pretoria - as an exchange student",
-        bearing: -0.01,
-        center: [-28.192359, -25.755017],
-        zoom: 12.83,
-        speed: 0.1,
-        pitch: 0
+      'story': "In high school, I lived for a year with a host family in South Africa - Pretoria - as an exchange student",
+      bearing: -0.01,
+      center: [28.218597, -25.740631],
+      zoom: 11.74,
+      speed: 0.1,
+      pitch: 0
     },
     'Dunedin': {
       'story': "I decided to travel after high school. I wanted to go to college too, though. So I just did both at the same time and ended up in Dunedin, New Zealand, and I studied philosophy.",
       bearing: -0.01,
-      center: [-170.517465, -45.883668],
+      center: [170.517465, -45.883668],
       zoom: 12.47,
       speed: 0.8,
       pitch: 0
@@ -220,23 +220,25 @@ var fadeIn = setInterval(function(){
   //need to set up array of keys and array of values in the for loop to get each entry I need
   let locations = Object.keys(locationList)
   let results = Object.values(locationList)
-  // function showResults() {
-  //   for (var i = 0; i < locations.length; i++) {
-  //       return locations[i]
-  //       return results[i]['story']
-  //   }
-  // }
+  // I need to count the clicks and that gives me the information to display, clicks needs to be a varibale accessible outside the click event
   let clicks = 0
-
-  // I need to count the clicks and that gives me the information to display
+  //iterating through the array on each click, incrementing the clicks after each one
   $('#mappage').click(function(event){
-
     for (let i = 0; i < locations.length; i++) {
       if (clicks == i) {
         $('#mappage').text(results[i].story)
-
+        const map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/jenem583/cjs0lsxnn02hs1fqhjnrvxlsd',
+          bearing: results[i].bearing,
+          center: results[i].center,
+          zoom: results[i].zoom,
+          speed: results[i].speed,
+          pitch: results[i].pitch
+        });
+        var nav = new mapboxgl.NavigationControl();
+          map.addControl(nav, 'bottom-right');
       }
-
     }
     clicks = clicks + 1
   });
