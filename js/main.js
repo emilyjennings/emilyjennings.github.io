@@ -237,7 +237,7 @@ var fadeIn = setInterval(function(){
       pitch: 0
     },
     'South Korea': {
-      'story': "Teaching in Korea",
+      'headline': "Teaching in Korea",
       'story': "Discouraged by all the barriers facing teachers in this country, and yearning to travel once again, I picked up and moved to South Korea for a year to be a public school teacher there. It turned into five years! I lived on a beautiful island - strangely, my first home there was also next to a chicken farm.",
       bearing: -0.01,
       center: [126.564540, 33.392854],
@@ -255,7 +255,7 @@ var fadeIn = setInterval(function(){
       pitch: 0
     },
     'DC Again': {
-      'story': "DC Again!",
+      'headline': "DC Again!",
       'story': "To be closer to family, I moved in March 2018 back to DC to be near my roots and family. I worked at another coding bootcamp and coded furiously after work and on weekends. And that takes you to the present day!",
       bearing: -0.01,
       center: [-77.015468, 38.894736],
