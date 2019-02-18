@@ -189,7 +189,7 @@ var fadeIn = setInterval(function(){
 
 // mapbox functionality
 
-
+//list of places
   const locationList = {
     'CollegePark': {
         'story': "It all started in College Park, Maryland",
@@ -217,12 +217,38 @@ var fadeIn = setInterval(function(){
     }
   }
 
+  //need to set up array of keys and array of values in the for loop to get each entry I need
+  let locations = Object.keys(locationList)
+  let results = Object.values(locationList)
+  // function showResults() {
+  //   for (var i = 0; i < locations.length; i++) {
+  //       return locations[i]
+  //       return results[i]['story']
+  //   }
+  // }
+  let clicks = 0
 
-    $('#mappage').click(function(event){
-      let counter = 0
-      while (counter < Object.keys(locationList).length) {
-        $('#mappage').text(Object.keys(locationList)[counter]['story'])
-        counter += 1
+  // I need to count the clicks and that gives me the information to display
+  $('#mappage').click(function(event){
+
+    for (let i = 0; i < locations.length; i++) {
+      if (clicks == i) {
+        $('#mappage').text(results[i].story)
+
+      }
+
+    }
+    clicks = clicks + 1
+  });
+
+
+
+
+
+
+
+
+        // counter += 1
       // const map = new mapboxgl.Map({
       //   container: 'map',
       //   style: 'mapbox://styles/jenem583/cjs0lsxnn02hs1fqhjnrvxlsd',
@@ -234,8 +260,8 @@ var fadeIn = setInterval(function(){
       // });
       // var nav = new mapboxgl.NavigationControl();
       //   map.addControl(nav, 'bottom-right');
-      }
-    });
+      // }
+
 
 
 
