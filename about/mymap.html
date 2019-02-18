@@ -13,14 +13,12 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <script src="../js/main.js" charset="utf-8"></script>
-
-
   </head>
   <body>
-
     <h1 id="mappage">Where's Emily been? Click here to start!</h1>
 
     <div id='map'></div>
+    
     <script>
       mapboxgl.accessToken = 'pk.eyJ1IjoiamVuZW01ODMiLCJhIjoiY2pzMGxwOHJyMWwzeDQzcGlta2c1ODJ2YSJ9.x4VK6JYLigcauO3Vw9eDAw';
       const map = new mapboxgl.Map({
@@ -33,7 +31,7 @@
         pitch: 0
       });
       var nav = new mapboxgl.NavigationControl();
-        map.addControl(nav, 'bottom-right'); 
+        map.addControl(nav, 'bottom-right');
     </script>
 
   </body>

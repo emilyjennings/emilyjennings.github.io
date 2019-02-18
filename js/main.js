@@ -146,7 +146,7 @@ var fadeIn = setInterval(function(){
   });
 
 
-
+//lightbulb going on and off a few times
   $('i.fa.fa-lightbulb-o').animate({
     opacity: '0',
   }, 300).animate({
@@ -192,91 +192,50 @@ var fadeIn = setInterval(function(){
 
   const locationList = {
     'CollegePark': {
-        story: "It all started in College Park, Maryland",
+        'story': "It all started in College Park, Maryland",
         bearing: -0.01,
-        center: [-76.943500, 38.949982],
-        zoom: 11.28,
+        center: [-76.931253, 38.976956],
+        zoom: 13.51,
         speed: 0.8,
         pitch: 0
     },
+    'Pretoria': {
+        'story': "In high school, I lived for a year with a host family in South Africa - Pretoria - as an exchange student",
+        bearing: -0.01,
+        center: [-28.192359, -25.755017],
+        zoom: 12.83,
+        speed: 0.1,
+        pitch: 0
+    },
     'Dunedin': {
-      story: "I decided to travel after high school. I wanted to go to college too, though. So I just did both at the same time and ended up in Dunedin, New Zealand, a country I didn't know existed till about a year before I went."
+      'story': "I decided to travel after high school. I wanted to go to college too, though. So I just did both at the same time and ended up in Dunedin, New Zealand, and I studied philosophy.",
+      bearing: -0.01,
+      center: [-170.517465, -45.883668],
+      zoom: 12.47,
+      speed: 0.8,
+      pitch: 0
     }
   }
 
 
-  $('#mappage').click(function(event){
-    // for (var i = 0; i < locationList.length; i++) {
-      $('#mappage').text(locationList.CollegePark.story)
-      const map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/jenem583/cjs0lsxnn02hs1fqhjnrvxlsd',
-        bearing: locationList.CollegePark.bearing,
-        center: locationList.CollegePark.center,
-        zoom: locationList.CollegePark.zoom,
-        speed: locationList.CollegePark.speed,
-        pitch: locationList.CollegePark.pitch
-      });
-    // }
-  });
-
-/*
-
-  var displayGallery = function(whichGallery){
-    $('#tech, #crazy, #creative, #bed', "#world", "#mom").hide();
-    $(whichGallery).show();
-  };
-
-  $('.nav-gallery a').on('click', function(event){
-    event.preventDefault();
-    //remove is active classes
-    $('.nav-gallery a').removeClass('is-active');
-    //add class of is-active
-    $(this).addClass('is-active');
-    // get the href attr of "this" using a jQuery selector
-    var clicked = $(this).attr('href');
-    console.log(clicked);
-    displayGallery(clicked);
-  });
-
-*/
-
-  /* var slideShow = 1
-  showTitle(slideShow)
-
-  function plusMessage(n) {
-    showTitle(slideShow += n);
-  }
-
-  function showTitle(n) {
-    var i;
-    var x = document.getElementsByClassName("thanks");
-    if (n > x.length) {slideShow = 1}
-    if (n < 1) {slideShow = x.length};
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
-    }
-    x[slideIndex-1].style.display = "block";
-  } */
-
-/*
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-    showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("thanks");
-    if (n > x.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = x.length} ;
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-    }
-    x[slideIndex-1].style.display = "block";
-} */
+    $('#mappage').click(function(event){
+      let counter = 0
+      while (counter < Object.keys(locationList).length) {
+        $('#mappage').text(Object.keys(locationList)[counter]['story'])
+        counter += 1
+      // const map = new mapboxgl.Map({
+      //   container: 'map',
+      //   style: 'mapbox://styles/jenem583/cjs0lsxnn02hs1fqhjnrvxlsd',
+      //   bearing: locationList.CollegePark.bearing,
+      //   center: locationList.CollegePark.center,
+      //   zoom: locationList.CollegePark.zoom,
+      //   speed: locationList.CollegePark.speed,
+      //   pitch: locationList.CollegePark.pitch
+      // });
+      // var nav = new mapboxgl.NavigationControl();
+      //   map.addControl(nav, 'bottom-right');
+      }
+    });
 
 
 
