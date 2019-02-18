@@ -629,6 +629,33 @@ pre {
   font-weight: bold;
 }
 
+#storycontent {
+  display: block;
+  text-align: center;
+  background-color: #23C6B3;
+  opacity: 0.9;
+  border-radius: 5px 5px 5px 5px;
+  margin: 20px 200px 40px 200px;
+  padding: 20px;
+  font-size: 20px;
+  color: #3B4548;
+  font-weight: bold;
+}
+
+#note {
+  display: block;
+  text-align: center;
+  background-color: #23C6B3;
+  opacity: 0.9;
+  border-radius: 5px 5px 5px 5px;
+  margin: 20px 400px 40px 400px;
+  padding: 10px;
+  font-size: 15px;
+  color: #3B4548;
+  font-weight: bold;
+}
+
+
 
 
 

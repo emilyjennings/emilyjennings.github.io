@@ -192,15 +192,17 @@ var fadeIn = setInterval(function(){
 //list of places
   const locationList = {
     'CollegePark': {
-      'story': "It all started in College Park, Maryland. I grew up there, in the suburbs of DC!",
+      'headline': "It all started in College Park, Maryland.",
+      'story': "I grew up there, in the suburbs of DC!",
       bearing: -0.01,
       center: [-76.931253, 38.976956],
-      zoom: 13.51,
+      zoom: 12.51,
       speed: 0.8,
       pitch: 0
     },
     'Pretoria': {
-      'story': "In high school, I lived for a year with a host family in South Africa - in Pretoria - as an exchange student",
+      'headline': "I was so lucky to live in Pretoria, South Africa as a teenager.",
+      'story': "In high school, I lived for a year with a host family in South Africa as an exchange student.",
       bearing: -0.01,
       center: [28.218597, -25.740631],
       zoom: 11.74,
@@ -208,50 +210,65 @@ var fadeIn = setInterval(function(){
       pitch: 0
     },
     'Dunedin': {
+      'headline': "University in New Zealand",
       'story': "I decided to travel after high school. I wanted to go to college too, though. So I just did both at the same time and ended up in Dunedin, New Zealand, and I studied philosophy.",
       bearing: -0.01,
       center: [170.517465, -45.883668],
-      zoom: 12.47,
+      zoom: 11.47,
       speed: 0.8,
       pitch: 0
     },
     'DC': {
+      'headline': "Back in DC",
       'story': "I wanted to try to use my advanced degree in philosophy to change the world somehow, so I came back to the DC area, but couldn't land a job doing more than administrative work.",
       bearing: -0.01,
-      center: [170.517465, -45.883668],
-      zoom: 12.47,
+      center: [-77.015468, 38.894736],
+      zoom: 11.40,
       speed: 0.8,
       pitch: 0
     },
     'Fayetteville': {
-      'story': "To really make a difference, I decided to become a teacher and moved to North Carolina where I intended to pursue an alternative licensure as a public school teacher. I taught 8th grade English Language Arts for a year.",
+      'headline': "Teaching in NC",
+      'story': "To really make a difference, I decided to become a teacher and moved to North Carolina where I intended to pursue an alternative licensure as a public school teacher. I taught 8th grade English Language Arts for a year, and lived in Harnett County next to a chicken farm.",
       bearing: -0.01,
-      center: [170.517465, -45.883668],
-      zoom: 12.47,
+      center: [-79.014605, 35.186964],
+      zoom: 8.67,
       speed: 0.8,
       pitch: 0
     },
     'South Korea': {
-      'story': "Discouraged by all the barriers facing teachers in this country, and yearning to travel once again, I picked up and loved to South Korea for a year to be a public school teacher there. It turned into five years!",
+      'story': "Teaching in Korea",
+      'story': "Discouraged by all the barriers facing teachers in this country, and yearning to travel once again, I picked up and moved to South Korea for a year to be a public school teacher there. It turned into five years! I lived on a beautiful island - strangely, my first home there was also next to a chicken farm.",
       bearing: -0.01,
-      center: [170.517465, -45.883668],
-      zoom: 12.47,
+      center: [126.564540, 33.392854],
+      zoom: 8.50,
       speed: 0.8,
       pitch: 0
     },
     'Philly': {
-      'story': "After getting married and having a baby in Korea, I wanted to move back to my country to try to start a new career. I fell in love with tech and landed a job as a campus/community manager at a coding bootcamp in Philly.",
+      'headline': "Philly",
+      'story': "After getting married and having a baby in Korea, I wanted to move back to my country to try to start a new career. I fell in love with tech and landed a job as a campus/community manager at a coding bootcamp in Philly. I started coding a lot and knew it was my future.",
       bearing: -0.01,
-      center: [170.517465, -45.883668],
-      zoom: 12.47,
+      center: [-75.157802, 39.950999],
+      zoom: 11.50,
       speed: 0.8,
       pitch: 0
     },
     'DC Again': {
-      'story': "To be closer to family, I moved in March 2018 back to DC to be near my roots and family. And that takes you to the present day!",
+      'story': "DC Again!",
+      'story': "To be closer to family, I moved in March 2018 back to DC to be near my roots and family. I worked at another coding bootcamp and coded furiously after work and on weekends. And that takes you to the present day!",
       bearing: -0.01,
-      center: [170.517465, -45.883668],
-      zoom: 12.47,
+      center: [-77.015468, 38.894736],
+      zoom: 11.40,
+      speed: 0.8,
+      pitch: 0
+    },
+    'The End': {
+      'headline': "That's the end!",
+      'story': "Thanks to MapBox for making this possible. Use the nav menu to go back to the homepage",
+      bearing: -0.01,
+      center: [-77.015468, 38.894736],
+      zoom: 11.40,
       speed: 0.8,
       pitch: 0
     }
@@ -262,11 +279,18 @@ var fadeIn = setInterval(function(){
   let results = Object.values(locationList)
   // I need to count the clicks and that gives me the information to display, clicks needs to be a varibale accessible outside the click event
   let clicks = 0
+  //the second div starts out hidden
+  $("#storycontent").hide();
+
   //iterating through the array on each click, incrementing the clicks after each one
   $('#mappage').click(function(event){
     for (let i = 0; i < locations.length; i++) {
       if (clicks == i) {
-        $('#mappage').text(results[i].story)
+        // hide the note bar because that's ugly
+        $('#note').hide()
+        $('#mappage').text(results[i].headline)
+        //show the content story box
+        $('#storycontent').text(results[i].story).show()
         const map = new mapboxgl.Map({
           container: 'map',
           style: 'mapbox://styles/jenem583/cjs0lsxnn02hs1fqhjnrvxlsd',
