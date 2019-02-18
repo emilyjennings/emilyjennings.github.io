@@ -192,7 +192,7 @@ var fadeIn = setInterval(function(){
 //list of places
   const locationList = {
     'CollegePark': {
-      'story': "It all started in College Park, Maryland",
+      'story': "It all started in College Park, Maryland. I grew up there, in the suburbs of DC!",
       bearing: -0.01,
       center: [-76.931253, 38.976956],
       zoom: 13.51,
@@ -200,7 +200,7 @@ var fadeIn = setInterval(function(){
       pitch: 0
     },
     'Pretoria': {
-      'story': "In high school, I lived for a year with a host family in South Africa - Pretoria - as an exchange student",
+      'story': "In high school, I lived for a year with a host family in South Africa - in Pretoria - as an exchange student",
       bearing: -0.01,
       center: [28.218597, -25.740631],
       zoom: 11.74,
@@ -209,6 +209,46 @@ var fadeIn = setInterval(function(){
     },
     'Dunedin': {
       'story': "I decided to travel after high school. I wanted to go to college too, though. So I just did both at the same time and ended up in Dunedin, New Zealand, and I studied philosophy.",
+      bearing: -0.01,
+      center: [170.517465, -45.883668],
+      zoom: 12.47,
+      speed: 0.8,
+      pitch: 0
+    },
+    'DC': {
+      'story': "I wanted to try to use my advanced degree in philosophy to change the world somehow, so I came back to the DC area, but couldn't land a job doing more than administrative work.",
+      bearing: -0.01,
+      center: [170.517465, -45.883668],
+      zoom: 12.47,
+      speed: 0.8,
+      pitch: 0
+    },
+    'Fayetteville': {
+      'story': "To really make a difference, I decided to become a teacher and moved to North Carolina where I intended to pursue an alternative licensure as a public school teacher. I taught 8th grade English Language Arts for a year.",
+      bearing: -0.01,
+      center: [170.517465, -45.883668],
+      zoom: 12.47,
+      speed: 0.8,
+      pitch: 0
+    },
+    'South Korea': {
+      'story': "Discouraged by all the barriers facing teachers in this country, and yearning to travel once again, I picked up and loved to South Korea for a year to be a public school teacher there. It turned into five years!",
+      bearing: -0.01,
+      center: [170.517465, -45.883668],
+      zoom: 12.47,
+      speed: 0.8,
+      pitch: 0
+    },
+    'Philly': {
+      'story': "After getting married and having a baby in Korea, I wanted to move back to my country to try to start a new career. I fell in love with tech and landed a job as a campus/community manager at a coding bootcamp in Philly.",
+      bearing: -0.01,
+      center: [170.517465, -45.883668],
+      zoom: 12.47,
+      speed: 0.8,
+      pitch: 0
+    },
+    'DC Again': {
+      'story': "To be closer to family, I moved in March 2018 back to DC to be near my roots and family. And that takes you to the present day!",
       bearing: -0.01,
       center: [170.517465, -45.883668],
       zoom: 12.47,
@@ -241,7 +281,7 @@ var fadeIn = setInterval(function(){
       }
     }
     clicks = clicks + 1
-  });
+  })
 
 
 
