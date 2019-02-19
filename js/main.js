@@ -239,7 +239,7 @@ var fadeIn = setInterval(function(){
       zoom: 8.67,
       speed: 0.8,
       pitch: 0,
-      image: '../img/childhood.jpg'
+      image: '../img/fayetteville.jpg'
     },
     'South Korea': {
       'headline': "Teaching in Korea",

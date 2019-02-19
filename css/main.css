@@ -621,9 +621,9 @@ pre {
   position: relative;
   top:0;
   bottom:0;
-  width: 20%;
-  margin-left: 40%;
-  margin-right: 40%;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
   margin-top: 30px;
   margin-bottom: 20px;
   /* border: 10px solid #23C6B3;
@@ -888,7 +888,6 @@ pre {
   pre {
     font-size: 15px;
     overflow: scroll;
-
   }
 
   #map {
