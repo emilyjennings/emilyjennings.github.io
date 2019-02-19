@@ -198,7 +198,8 @@ var fadeIn = setInterval(function(){
       center: [-76.931253, 38.976956],
       zoom: 12.51,
       speed: 0.8,
-      pitch: 0
+      pitch: 0,
+      image: '../img/childhood2.jpg'
     },
     'Pretoria': {
       'headline': "I was so lucky to live in Pretoria, South Africa as a teenager.",
@@ -207,7 +208,8 @@ var fadeIn = setInterval(function(){
       center: [28.218597, -25.740631],
       zoom: 11.74,
       speed: 0.1,
-      pitch: 0
+      pitch: 0,
+      image: '../img/sa.jpg'
     },
     'Dunedin': {
       'headline': "University in New Zealand",
@@ -216,7 +218,8 @@ var fadeIn = setInterval(function(){
       center: [170.517465, -45.883668],
       zoom: 11.47,
       speed: 0.8,
-      pitch: 0
+      pitch: 0,
+      image: '../img/graduation.jpg'
     },
     'DC': {
       'headline': "Back in DC",
@@ -225,7 +228,8 @@ var fadeIn = setInterval(function(){
       center: [-77.015468, 38.894736],
       zoom: 11.40,
       speed: 0.8,
-      pitch: 0
+      pitch: 0,
+      image: '../img/dc.jpg'
     },
     'Fayetteville': {
       'headline': "Teaching in NC",
@@ -234,7 +238,8 @@ var fadeIn = setInterval(function(){
       center: [-79.014605, 35.186964],
       zoom: 8.67,
       speed: 0.8,
-      pitch: 0
+      pitch: 0,
+      image: '../img/childhood.jpg'
     },
     'South Korea': {
       'headline': "Teaching in Korea",
@@ -243,7 +248,8 @@ var fadeIn = setInterval(function(){
       center: [126.564540, 33.392854],
       zoom: 8.50,
       speed: 0.8,
-      pitch: 0
+      pitch: 0,
+      image: '../img/jeju14.jpg'
     },
     'Philly': {
       'headline': "Philly",
@@ -252,7 +258,8 @@ var fadeIn = setInterval(function(){
       center: [-75.157802, 39.950999],
       zoom: 11.50,
       speed: 0.8,
-      pitch: 0
+      pitch: 0,
+      image: '../img/Oldcity4.JPG'
     },
     'DC Again': {
       'headline': "DC Again!",
@@ -261,7 +268,8 @@ var fadeIn = setInterval(function(){
       center: [-77.015468, 38.894736],
       zoom: 11.40,
       speed: 0.8,
-      pitch: 0
+      pitch: 0,
+      image: '../img/halloween.jpg'
     },
     'The End': {
       'headline': "That's the end!",
@@ -270,7 +278,8 @@ var fadeIn = setInterval(function(){
       center: [-77.015468, 38.894736],
       zoom: 11.40,
       speed: 0.8,
-      pitch: 0
+      pitch: 0,
+      image: '../img/hyeopjae2.jpg'
     }
   }
 
@@ -286,11 +295,14 @@ var fadeIn = setInterval(function(){
   $('#mappage').click(function(event){
     for (let i = 0; i < locations.length; i++) {
       if (clicks == i) {
-        // hide the note bar because that's ugly
+        // hide the note bar because it's ugly
         $('#note').hide()
+        //headline bar text
         $('#mappage').text(results[i].headline)
         //show the content story box
         $('#storycontent').text(results[i].story).show()
+        //photo appears
+        $('#img').html('<img src="' + results[i].image + '">')
         const map = new mapboxgl.Map({
           container: 'map',
           style: 'mapbox://styles/jenem583/cjs0lsxnn02hs1fqhjnrvxlsd',
