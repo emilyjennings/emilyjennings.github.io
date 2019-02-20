@@ -231,7 +231,7 @@ var fadeIn = setInterval(function(){
       'headline': "Back in DC",
       'story': "I wanted to try to use my advanced degree in philosophy to change the world somehow, so I came back to the DC area, but couldn't land a job doing more than administrative work.",
       bearing: 7,
-      center: [170.517465, -45.883668],
+      center: [170.514093, -45.865646],
       end: [-77.015468, 38.894736],
       zoom: 14.5,
       nextzoom: 12.5,
@@ -254,13 +254,13 @@ var fadeIn = setInterval(function(){
     'South Korea': {
       'headline': "Teaching in Korea",
       'story': "Discouraged by all the barriers facing teachers in this country, and yearning to travel once again, I picked up and moved to South Korea for a year to be a public school teacher there. It turned into five years! I lived on a beautiful island - strangely, my first home there was also next to a chicken farm.",
-      bearing: 8,
+      bearing: 161.38,
       center: [-79.014605, 35.186964],
-      end: [126.564540, 33.392854],
+      end: [126.541432, 33.466959],
       zoom: 9.5,
       nextzoom: 9,
       speed: 0.9,
-      pitch: 60,
+      pitch: 59,
       image: '../img/jeju14.jpg'
     },
     'Philly': {
@@ -391,27 +391,6 @@ map.on('load', function() {
     }
   }, labelLayerId);
 });
-
-
-
-
-
-
-
-
-        // counter += 1
-      // const map = new mapboxgl.Map({
-      //   container: 'map',
-      //   style: 'mapbox://styles/jenem583/cjs0lsxnn02hs1fqhjnrvxlsd',
-      //   bearing: locationList.CollegePark.bearing,
-      //   center: locationList.CollegePark.center,
-      //   zoom: locationList.CollegePark.zoom,
-      //   speed: locationList.CollegePark.speed,
-      //   pitch: locationList.CollegePark.pitch
-      // });
-      // var nav = new mapboxgl.NavigationControl();
-      //   map.addControl(nav, 'bottom-right');
-      // }
 
 
 
