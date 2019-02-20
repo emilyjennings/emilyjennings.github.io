@@ -277,7 +277,7 @@ var fadeIn = setInterval(function(){
     },
     'DC Again': {
       'headline': "DC Again!",
-      'story': "To be closer to family, I moved in March 2018 back to DC to be near my roots and family. I worked at another coding bootcamp and coded furiously after work and on weekends. And that takes you to the present day!",
+      'story': "To be closer to family, I moved in March 2018 back to DC. I worked at another coding bootcamp and coded furiously after work and on weekends. And that takes you to the present day!",
       bearing: 29.03,
       center: [-75.157802, 39.950999],
       end: [-77.041798, 38.919742],
