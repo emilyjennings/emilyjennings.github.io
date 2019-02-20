@@ -195,8 +195,10 @@ var fadeIn = setInterval(function(){
       'headline': "It all started in College Park, Maryland.",
       'story': "I grew up there, in the suburbs of DC!",
       bearing: 9.60,
-      center: [-76.934897, 38.974867],
-      zoom: 15.34,
+      center: [-85.113192, 39.385946],
+      end: [-76.933839, 38.974368],
+      zoom: 1.3,
+      nextzoom: 19,
       speed: 0.8,
       pitch: 60.00,
       image: '../img/childhood2.jpg'
@@ -204,69 +206,83 @@ var fadeIn = setInterval(function(){
     'Pretoria': {
       'headline': "I was so lucky to live in Pretoria, South Africa as a teenager.",
       'story': "In high school, I lived for a year with a host family in South Africa as an exchange student.",
-      bearing: -0.01,
-      center: [28.218597, -25.740631],
-      zoom: 11.74,
-      speed: 0.1,
-      pitch: 0,
+      bearing: 9.60,
+      center: [-76.933839, 38.974368],
+      end: [28.218597, -25.740631],
+      zoom: 19,
+      nextzoom: 14,
+      speed: 0.8,
+      pitch: 60,
       image: '../img/sa.jpg'
     },
     'Dunedin': {
       'headline': "University in New Zealand",
       'story': "I decided to travel after high school. I wanted to go to college too, though. So I just did both at the same time and ended up in Dunedin, New Zealand, and I studied philosophy.",
-      bearing: -0.01,
-      center: [170.517465, -45.883668],
-      zoom: 11.47,
-      speed: 0.8,
-      pitch: 0,
+      bearing: 33.83,
+      center: [28.218597, -25.740631],
+      end: [170.514093, -45.865646],
+      zoom: 14,
+      nextzoom: 15,
+      speed: 0.9,
+      pitch: 60,
       image: '../img/graduation2.jpg'
     },
     'DC': {
       'headline': "Back in DC",
       'story': "I wanted to try to use my advanced degree in philosophy to change the world somehow, so I came back to the DC area, but couldn't land a job doing more than administrative work.",
-      bearing: -0.01,
-      center: [-77.015468, 38.894736],
-      zoom: 11.40,
+      bearing: 7,
+      center: [170.517465, -45.883668],
+      end: [-77.015468, 38.894736],
+      zoom: 13,
+      nextzoom: 12.5,
       speed: 0.8,
-      pitch: 0,
+      pitch: 50,
       image: '../img/dc3.jpg'
     },
     'Fayetteville': {
       'headline': "Teaching in NC",
       'story': "To really make a difference, I decided to become a teacher and moved to North Carolina where I intended to pursue an alternative licensure as a public school teacher. I taught 8th grade English Language Arts for a year, and lived in Harnett County next to a chicken farm.",
-      bearing: -0.01,
-      center: [-79.014605, 35.186964],
-      zoom: 8.67,
+      bearing: -153.37,
+      center: [-77.015468, 38.894736],
+      end: [-79.107013, 35.224293],
+      zoom: 13,
+      nextzoom: 9.5,
       speed: 0.8,
-      pitch: 0,
+      pitch: 59,
       image: '../img/fayetteville.jpg'
     },
     'South Korea': {
       'headline': "Teaching in Korea",
       'story': "Discouraged by all the barriers facing teachers in this country, and yearning to travel once again, I picked up and moved to South Korea for a year to be a public school teacher there. It turned into five years! I lived on a beautiful island - strangely, my first home there was also next to a chicken farm.",
-      bearing: -0.01,
-      center: [126.564540, 33.392854],
-      zoom: 8.50,
-      speed: 0.8,
-      pitch: 0,
+      bearing: 8,
+      center: [-79.014605, 35.186964],
+      end: [126.564540, 33.392854],
+      zoom: 16,
+      nextzoom: 9,
+      speed: 0.9,
+      pitch: 60,
       image: '../img/jeju14.jpg'
     },
     'Philly': {
       'headline': "Philly",
       'story': "After getting married and having a baby in Korea, I wanted to move back to my country to try to start a new career. I fell in love with tech and landed a job as a campus/community manager at a coding bootcamp in Philly. I started coding a lot and knew it was my future.",
-      bearing: -0.01,
-      center: [-75.157802, 39.950999],
-      zoom: 11.50,
+      bearing: 9,
+      center: [126.564540, 33.392854],
+      end: [-75.157802, 39.950999],
+      zoom: 9,
+      nextzoom: 14,
       speed: 0.8,
-      pitch: 0,
+      pitch: 60,
       image: '../img/Oldcity4.JPG'
     },
     'DC Again': {
       'headline': "DC Again!",
       'story': "To be closer to family, I moved in March 2018 back to DC to be near my roots and family. I worked at another coding bootcamp and coded furiously after work and on weekends. And that takes you to the present day!",
       bearing: 29.03,
-      center: [-77.041798, 38.919742],
-      zoom: 15,
+      center: [-75.157802, 39.950999],
+      end: [-77.041798, 38.919742],
+      zoom: 14,
+      nextzoom: 15,
       speed: 0.8,
       pitch: 60,
       image: '../img/halloween.jpg'
@@ -274,10 +290,12 @@ var fadeIn = setInterval(function(){
     'The End': {
       'headline': "That's the end!",
       'story': "Thanks to MapBox for making this possible. Use the nav menu to go back to the homepage",
-      bearing: -0.01,
-      center: [-77.015468, 38.894736],
-      zoom: 11.40,
-      speed: 0.8,
+      bearing: 3,
+      center: [-77.041798, 38.919742],
+      end: [-77.015468, 38.894736],
+      zoom: 15,
+      nextzoom: 10,
+      speed: 0.2,
       pitch: 0,
       image: '../img/hyeopjae2.jpg'
     }
@@ -293,6 +311,7 @@ var fadeIn = setInterval(function(){
 
   //iterating through the array on each click, incrementing the clicks after each one
   $('#mappage').click(function(event){
+    event.preventDefault()
     for (let i = 0; i < locations.length; i++) {
       if (clicks == i) {
         // hide the note bar because it's ugly
@@ -303,16 +322,28 @@ var fadeIn = setInterval(function(){
         $('#storycontent').text(results[i].story).show()
         //photo appears
         $('#img').html('<img src="' + results[i].image + '">')
+        //allowing it to fly to the next location
+        let start = results[i].center;
+        let end = results[i].end;
+        //map parameters
         const map = new mapboxgl.Map({
           container: 'map',
           style: 'mapbox://styles/jenem583/cjs0lsxnn02hs1fqhjnrvxlsd',
-          bearing: results[i].bearing,
-          center: results[i].center,
+          center: start,
           zoom: results[i].zoom,
-          speed: results[i].speed,
-          pitch: results[i].pitch,
-          container: 'map'
+          container: 'map',
+          pitch: 60
         });
+
+        map.flyTo({
+          center: end,
+          zoom: results[i].nextzoom,
+          speed: results[i].speed,
+          curve: 1,
+          pitch: results[i].pitch,
+          bearing: results[i].bearing
+        })
+
         var nav = new mapboxgl.NavigationControl();
           map.addControl(nav, 'bottom-right');
       }
