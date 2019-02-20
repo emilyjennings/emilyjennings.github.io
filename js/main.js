@@ -257,7 +257,7 @@ var fadeIn = setInterval(function(){
       bearing: 8,
       center: [-79.014605, 35.186964],
       end: [126.564540, 33.392854],
-      zoom: 16,
+      zoom: 9.5,
       nextzoom: 9,
       speed: 0.9,
       pitch: 60,
