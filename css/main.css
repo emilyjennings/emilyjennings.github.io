@@ -1062,6 +1062,12 @@ pre {
     margin-right: 10%;
   }
 
+  #img {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
   #mappage {
     margin: 20px 20px 30px 20px;
     padding: 30px;
@@ -1069,13 +1075,13 @@ pre {
   }
 
   #storycontent {
-    margin: 20px 10px 30px 10px;
+    margin: 20px 20px 30px 20px;
     padding: 15px;
     font-size: 18px;
   }
 
   #note {
-    margin: 20px 15px 40px 15px;
+    margin: 20px 20px 30px 20px;
     padding: 8px;
     font-size: 12px;
   }
