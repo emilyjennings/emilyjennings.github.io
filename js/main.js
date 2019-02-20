@@ -222,7 +222,7 @@ var fadeIn = setInterval(function(){
       center: [28.218597, -25.740631],
       end: [170.514093, -45.865646],
       zoom: 14,
-      nextzoom: 15,
+      nextzoom: 14.5,
       speed: 0.9,
       pitch: 60,
       image: '../img/graduation2.jpg'
@@ -233,7 +233,7 @@ var fadeIn = setInterval(function(){
       bearing: 7,
       center: [170.517465, -45.883668],
       end: [-77.015468, 38.894736],
-      zoom: 13,
+      zoom: 14.5,
       nextzoom: 12.5,
       speed: 0.8,
       pitch: 50,
