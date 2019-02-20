@@ -194,11 +194,11 @@ var fadeIn = setInterval(function(){
     'CollegePark': {
       'headline': "It all started in College Park, Maryland.",
       'story': "I grew up there, in the suburbs of DC!",
-      bearing: -17.6,
-      center: [-76.931253, 38.976956],
-      zoom: 12.51,
+      bearing: 9.60,
+      center: [-76.934897, 38.974867],
+      zoom: 15.34,
       speed: 0.8,
-      pitch: 45,
+      pitch: 60.00,
       image: '../img/childhood2.jpg'
     },
     'Pretoria': {
@@ -264,11 +264,11 @@ var fadeIn = setInterval(function(){
     'DC Again': {
       'headline': "DC Again!",
       'story': "To be closer to family, I moved in March 2018 back to DC to be near my roots and family. I worked at another coding bootcamp and coded furiously after work and on weekends. And that takes you to the present day!",
-      bearing: -0.01,
-      center: [-77.015468, 38.894736],
-      zoom: 11.40,
+      bearing: 29.03,
+      center: [-77.041798, 38.919742],
+      zoom: 15,
       speed: 0.8,
-      pitch: 0,
+      pitch: 60,
       image: '../img/halloween.jpg'
     },
     'The End': {
