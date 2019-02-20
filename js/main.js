@@ -194,11 +194,11 @@ var fadeIn = setInterval(function(){
     'CollegePark': {
       'headline': "It all started in College Park, Maryland.",
       'story': "I grew up there, in the suburbs of DC!",
-      bearing: -0.01,
+      bearing: -17.6,
       center: [-76.931253, 38.976956],
       zoom: 12.51,
       speed: 0.8,
-      pitch: 0,
+      pitch: 45,
       image: '../img/childhood2.jpg'
     },
     'Pretoria': {
@@ -219,7 +219,7 @@ var fadeIn = setInterval(function(){
       zoom: 11.47,
       speed: 0.8,
       pitch: 0,
-      image: '../img/graduation.jpg'
+      image: '../img/graduation2.jpg'
     },
     'DC': {
       'headline': "Back in DC",
@@ -229,7 +229,7 @@ var fadeIn = setInterval(function(){
       zoom: 11.40,
       speed: 0.8,
       pitch: 0,
-      image: '../img/dc.jpg'
+      image: '../img/dc3.jpg'
     },
     'Fayetteville': {
       'headline': "Teaching in NC",
@@ -310,7 +310,8 @@ var fadeIn = setInterval(function(){
           center: results[i].center,
           zoom: results[i].zoom,
           speed: results[i].speed,
-          pitch: results[i].pitch
+          pitch: results[i].pitch,
+          container: 'map'
         });
         var nav = new mapboxgl.NavigationControl();
           map.addControl(nav, 'bottom-right');
@@ -318,6 +319,47 @@ var fadeIn = setInterval(function(){
     }
     clicks = clicks + 1
   })
+
+  // The 'building' layer in the mapbox-streets vector source contains building-height
+// data from OpenStreetMap.
+map.on('load', function() {
+  // Insert the layer beneath any symbol layer.
+  var layers = map.getStyle().layers;
+
+  var labelLayerId;
+  for (var i = 0; i < layers.length; i++) {
+      if (layers[i].type === 'symbol' && layers[i].layout['text-field']) {
+      labelLayerId = layers[i].id;
+      break;
+    }
+  }
+
+  map.addLayer({
+    'id': '3d-buildings',
+    'source': 'composite',
+    'source-layer': 'building',
+    'filter': ['==', 'extrude', 'true'],
+    'type': 'fill-extrusion',
+    'minzoom': 15,
+    'paint': {
+    'fill-extrusion-color': '#aaa',
+
+    // use an 'interpolate' expression to add a smooth transition effect to the
+    // buildings as the user zooms in
+    'fill-extrusion-height': [
+      "interpolate", ["linear"], ["zoom"],
+      15, 0,
+      15.05, ["get", "height"]
+    ],
+    'fill-extrusion-base': [
+      "interpolate", ["linear"], ["zoom"],
+      15, 0,
+      15.05, ["get", "min_height"]
+    ],
+    'fill-extrusion-opacity': .6
+    }
+  }, labelLayerId);
+});
 
 
 
