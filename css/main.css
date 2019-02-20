@@ -897,6 +897,12 @@ pre {
     margin-right: 15%;
   }
 
+  #img {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
   #mappage {
     margin: 20px 50px 40px 50px;
     padding: 30px;
@@ -915,19 +921,7 @@ pre {
     font-size: 12px;
   }
 
-  #img {
-    display: block;
-    position: relative;
-    top:0;
-    bottom:0;
-    width: 70%;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    /* border: 10px solid #23C6B3;
-    border-radius: 20px; */
-  }
+
 
 
 
