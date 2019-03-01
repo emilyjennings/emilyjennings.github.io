@@ -240,6 +240,10 @@ a:hover {
   color: #C4EFDA;
 }
 
+.project a:hover {
+  color: #23C6B3
+}
+
 #cross {
   text-decoration: none;
   font-size: 19px
