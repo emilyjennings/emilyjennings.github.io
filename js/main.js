@@ -46,22 +46,22 @@ var fadeIn = setInterval(function(){
 
 //scroll to top effect
 
-  $("#top").click(function(event){
-    $.scrollTo(0, 1000);
-  });
+$("#top").click(function(event){
+  $.scrollTo(0, 1000);
+});
 
-  $(window).scroll(function(){
-    var scrollTop = $(window).scrollTop()
-    if (scrollTop > 150) {
-      $('#top').animate({
-        opacity: '0.75',
-      }, 700);
-    } else if (scrollTop < 150){
-      $('#top').animate({
-        opacity: '0.0',
-      }, 200);
-    }
-  });
+$(window).scroll(function(){
+  var scrollTop = $(window).scrollTop()
+  if (scrollTop > 150) {
+    $('#top').animate({
+      opacity: '0.75',
+    }, 700);
+  } else if (scrollTop < 150){
+    $('#top').animate({
+      opacity: '0.0',
+    }, 200);
+  }
+});
 
 //slideShow
 

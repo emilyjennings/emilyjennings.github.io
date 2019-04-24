@@ -1,1 +1,1 @@
-I hope to make this a visually appealing and easily browsable site with concise and current information about me to introduce myself to the world.
+This will soon be retired as my main portfolio site in favor of a new one built in React. You can see the code at https://github.com/emilyjennings/emily-portfolio
